@@ -1,0 +1,42 @@
+// Contact styles
+
+#contact {
+    background-color: $mainColour;
+
+    h2 {
+        font-family: $titleFont;
+    }
+}
+
+input {
+    @include bRadius();
+    border:none;
+    width:100%;
+    margin: 5px;
+    padding: 3px 10px;
+
+    &#name{
+         border: 2px solid $accentColour;
+    }
+
+    &#email{
+        border: 2px solid $accentColour2;
+    }
+
+    &#message {
+         border: 2px solid $accentColour1;
+    }
+
+    &[type="submit"] {
+        width: auto;
+        background-color: white;
+        color: $accentColour;
+        border: 2px solid $accentColour;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+            background-color: $accentColour;
+            color: white;
+        }
+    }
+}

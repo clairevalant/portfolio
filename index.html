@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Claire Valanth</title>
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Poppins|B612+Mono" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=B612+Mono|Major+Mono+Display" rel="stylesheet"> -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Claire Valant</title>
 </head>
 <body>
     <header>
         <div class="wrapper">
+            <img src="/assets/noun_menu_1166845.svg" alt="Navigation menu">
+            <!-- menu by Shiva from the Noun Project -->
             <nav>
                 <ul>
                     <li><a href="#home">home</a></li>
-                    <li><a href="about">about</a></li>
-                    <li><a href="work">work</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#work">work</a></li>
                     <li><a href="#skills">skills</a></li>
-                    <li><a href="contact">contact</a></li>
+                    <li><a href="#contact">contact</a></li>
                 </ul>
             </nav>
 
@@ -27,40 +33,87 @@
     </header>
 
     <section id="about">
+        <i class="far fa-smile"></i>
         <div class="wrapper">
             <h2>Hello, I'm Claire</h2>
+
+            <p>I'm a front-end developer who loves design and is always looking to add special touches to make any user's experience a great one. I'm also well versed in industry best practices and work hard to make accessibility a priority.</p>
+
+            <p>This year I graduated from Trent University with a bachelors in physics. I realized afterward that what I <span>really</span> want to do is combine my desire to create stuff with my tech background. Development is the perfect match for me!</p>
+
+            <p>In my spare time, you can find me drawing and painting, rollerskating, playing guitar, dancing, singing, doing small <a href="https://www.instagram.com/crummyclub.pokes/">tattoos</a>, and petting other people's dogs</p>
         </div>
     </section>
 
     <section id="work">
+        <!-- they're like building blocks but honestly i just love cubes -->
+        <i class="fas fa-cubes"></i>
         <div class="wrapper">
             <h2>Here's what I've made</h2>
+
+            <div class="project1">
+                <h3>Weather Wardrobe</h3>
+                <div class="tools">Dark Sky API | Google Places API | </div>
+                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="preview"></div>
+            </div>
+            <div class="project2">
+                <!-- dragon drop game????? -->
+                <h3>Toronto Tattoo Tinder</h3>
+                <div class="tools"> Javascript | jQuery Smooth Scroll</div>
+                <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam pos.</div>
+                <div class="preview"></div>
+            </div>
+            <div class="project3">
+                <h3>Summit PSD Conversion</h3>
+                <div class="tools">Floats | Zeppelin PSD tool</div>
+                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="preview"></div>
+            </div>
+            <div class="project4">
+                <h3>Versvs</h3>
+                <div class="tools">React | Goodreads API | Github Collaberation </div>
+                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam recusandae porro.</div>
+                <div class="preview"></div>
+            </div>
         </div>
     </section>
 
     <section id="skills">
+        <i class="fas fa-hammer"></i>
         <div class="wrapper">
-            <h2>Here's what I used</h2>
+            <h2>Here's what I've used</h2>
 
-            <i class="fab fa-html5" title="HTML5"></i>
-            <i class="fab fa-css3-alt" title="CSS3"></i>
-            <i class="fab fa-react" title="React"></i>
-            <i class="fas fa-code-branch" title="Firebase"></i>
-
+            <div class="iconContainer">
+                <i class="fab fa-html5" title="HTML5"></i>
+                <i class="fab fa-css3-alt" title="CSS3"></i>
+                <i class="fab fa-sass"></i>
+                <i class="fab fa-js-square" title="Javascript"></i>
+                <i class="fab fa-react" title="React"></i>
+                <img src="/assets/firebase.svg" alt="Firebase" title="Firebase">
+                <i class="fab fa-codepen"></i>
+                <i class="devicon-csharp-plain" title="C Sharp"></i>
+                <i class="fab fa-github-square" title="Github"></i>
+                <i class="devicon-git-plain" title="Git"></i>
+                <i class="devicon-visualstudio-plain" title="Visual Studio"></i>
+                <i class="fab fa-raspberry-pi" title="Raspberry Pi"></i>
+                <img src="/assets/Matlab.ico" alt="Matlab" title="Matlab">
+            </div>
 
         </div>
     </section>
 
     <section id="contact">
+        <i class="far fa-envelope"></i>
         <div class="wrapper">
             <h2>What's your name?</h2>
 
             <form action="#">
                 <label for="name" class="visuallyhidden">Name</label>
                 <input type="text" id="name" name="name" placeholder="my name is">
-                <label for="email">Email address</label>
+                <label for="email" class="visuallyhidden">Email address</label>
                 <input type="email" id="email" name="email" placeholder="email address">
-                <label for="message">Message</label>
+                <label for="message" class="visuallyhidden">Message</label>
                 <input type="text" id="message" name="message" placeholder="message">
                 <input type="submit" value="send message">
             </form>
@@ -70,7 +123,7 @@
     <!-- do i need a footer?? -->
     <footer>
         <div class="wrapper">
-            <p>&copy; Claire Valant 2018</p>
+            <p>&copy; Claire Valant 2018 <i class="far fa-smile"></i></p>
         </div>
     </footer>
 </body>
