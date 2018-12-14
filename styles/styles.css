@@ -145,6 +145,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   clip: rect(0 0 0);
   overflow: hidden; }
 
+.menu {
+  height: 5rem;
+  position: fixed;
+  top: 10vh;
+  left: 0; }
+
 nav {
   border: 2px solid #f0cd04;
   border-top-right-radius: 15px;
@@ -171,12 +177,13 @@ nav {
         -o-transition: width ease-in-out 0.3s;
         transition: width ease-in-out 0.3s; }
       nav li a:hover:before {
-        width: 100%;
-        background-color: #fded90; }
-    nav li:first-child a:before {
-      border-top-right-radius: 13px; }
+        width: 36px;
+        background-color: #f0cd04; }
     nav li:last-child a:before {
       border-bottom-left-radius: 13px; }
+    nav li i {
+      margin-right: 15px;
+      color: white; }
 
 h1 {
   font-size: 5rem;
@@ -222,20 +229,27 @@ a {
   a:visited {
     color: #e20000; }
 
+section .outside {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  position: relative;
+  top: 42px;
+  left: -20px; }
+
 #about {
   background-color: #f3f3f3; }
-
-.fa-smile {
-  color: #f0cd04; }
+  #about .fa-smile {
+    color: #f0cd04; }
 
 #work .fa-cubes {
   color: #1614ee; }
 
-#skills img {
-  width: 1.6rem; }
-
-#skills .fa-hammer {
-  color: #e20000; }
+#skills {
+  background-color: #f0cd04; }
+  #skills img {
+    width: 1.6rem; }
+  #skills .fa-hammer {
+    color: #e20000; }
 
 #contact {
   background-color: #f3f3f3; }
@@ -247,7 +261,7 @@ input {
   border-bottom-left-radius: 15px;
   border: none;
   width: 100%;
-  margin: 5px;
+  margin: 5px 0;
   padding: 3px 10px; }
   input#name {
     border: 2px solid #e20000; }
@@ -272,6 +286,21 @@ input {
 
 footer {
   color: white;
+  font-size: 1.3rem;
   background: #1614ee; }
   footer .fa-smile {
     color: white; }
+  footer .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }

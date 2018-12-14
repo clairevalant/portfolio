@@ -2,6 +2,13 @@
 
 // nav styling
 
+.menu {
+    height: 5rem;
+    position: fixed;
+    top:10vh;
+    left:0;
+}
+
 nav {
     // background-color: ;
     border: 2px solid $accentColour2;
@@ -33,17 +40,25 @@ nav {
             }
 
             &:hover:before {
-                width: 100%;
-                background-color: lighten($accentColour2, 30);
+                width: 36px;
+                background-color: $accentColour2;
             }
+
+
         }
 
-        &:first-child a:before { 
-            border-top-right-radius: 13px;
-        }
+        // &:first-child a:before { 
+        //     border-top-right-radius: 13px;
+        // }
 
         &:last-child a:before { 
             border-bottom-left-radius: 13px;
+        }
+
+        // icons in nav
+        i {
+            margin-right: 15px;
+            color: white;
         }
 
     }

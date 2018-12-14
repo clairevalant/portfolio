@@ -2,9 +2,14 @@
 
 footer {
     color: white;
+    font-size: 1.3rem;
     background: $accentColour1;
 
     .fa-smile {
         color: white;
+    }
+
+    .wrapper {
+        @include flexBox();
     }
 }
