@@ -3,6 +3,9 @@
 // nav styling
 
 nav {
+    // background-color: ;
+    border: 2px solid $accentColour2;
+    @include bRadius();
 
     ul {
         margin: 0;
@@ -11,6 +14,38 @@ nav {
 
     li {
         list-style-type: none;
+
+        a {
+            color: $accentColour1;
+            font-weight: 700;
+            display: block;
+            padding: 10px;
+
+             &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                height:100%;
+                width: 0px;
+                bottom:0;
+                left: 0;
+                transition: width ease-in-out 0.3s; 
+            }
+
+            &:hover:before {
+                width: 100%;
+                background-color: lighten($accentColour2, 30);
+            }
+        }
+
+        &:first-child a:before { 
+            border-top-right-radius: 13px;
+        }
+
+        &:last-child a:before { 
+            border-bottom-left-radius: 13px;
+        }
+
     }
 }
 
