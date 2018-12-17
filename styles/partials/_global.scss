@@ -18,22 +18,34 @@ footer {
 
 section {
     padding-bottom: 18px;
+
+    a {
+        text-decoration: none;
+        position: relative;
+        color: $accentColour1;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:visited {
+            color: $accentColour;
+        }
+    }
 }
 
 .wrapper {
     width: 70vw;
 }
 
-a {
-    text-decoration: none;
-    transition: text-decoration 0.3s;
-    position: relative;
-    // z-index: 10;
+// ul {
+//     margin: 0;
+//     padding: 0;
 
-    &:visited {
-        color: $accentColour;
-    }
-}
+//     li {
+//         list-style-type: none;
+//     }
+// }
 
 h2 {
     margin-top:0;
