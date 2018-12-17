@@ -147,6 +147,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 header {
   background-color: #1614ee;
+  border-bottom: 11px dotted white;
   height: 90vh;
   color: white;
   text-align: center; }
@@ -200,25 +201,24 @@ h1 {
   display: block;
   z-index: 10;
   position: fixed;
-  top: 4vh;
+  top: 5vh;
   right: 15vw; }
 
 .social {
-  width: 100%; }
-  .social ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
   .social a {
     color: white;
     font-size: 2rem;
@@ -226,40 +226,46 @@ h1 {
     -o-transition: text-shadow 0.5s;
     transition: text-shadow 0.5s; }
     .social a:hover {
-      text-shadow: 5px 5px white; }
+      text-shadow: 5px 5px rgba(255, 255, 255, 0.582); }
     .social a:visited {
       color: #f0cd04; }
 
-.siteNav {
+nav {
   background-color: white;
   border: 2px solid #f0cd04;
   border-top-left-radius: 15px;
   border-bottom-right-radius: 15px; }
-  .siteNav li a {
+  nav li {
+    text-align: left;
+    z-index: 1; }
+  nav a {
     color: #1614ee;
+    text-decoration: none;
     font-weight: 700;
     display: block;
-    padding: 10px; }
-    .siteNav li a:before {
+    padding: 10px;
+    position: relative; }
+    nav a::before {
       content: "";
       position: absolute;
       z-index: -1;
       height: 100%;
       width: 0px;
       bottom: 0;
+      top: 0;
       left: 0;
       -webkit-transition: width ease-in-out 0.3s;
       -o-transition: width ease-in-out 0.3s;
       transition: width ease-in-out 0.3s; }
-    .siteNav li a:hover:before {
+    nav a:hover::before {
       width: 36px;
       background-color: #f0cd04; }
-  .siteNav li:first-child a:before {
+  nav li:first-child a:before {
     border-top-left-radius: 13px; }
-  .siteNav li i {
-    margin-right: 15px;
+  nav i {
     color: white;
-    z-index: 10; }
+    margin-right: 15px;
+    z-index: 5; }
 
 html {
   font-size: 62.5%; }
@@ -321,8 +327,10 @@ section .outside {
   #about .fa-smile {
     color: #f0cd04; }
 
-#work .fa-cubes {
-  color: #1614ee; }
+#work {
+  border-bottom: 11px dotted #f3f3f3; }
+  #work .fa-cubes {
+    color: #1614ee; }
 
 #skills {
   background-color: #f0cd04; }

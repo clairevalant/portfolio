@@ -2,6 +2,7 @@
 
 header {
     background-color: $accentColour1;
+    border-bottom: 11px dotted white;
     height: 90vh;
     color: white;
     text-align: center;
@@ -47,18 +48,15 @@ h1 {
 
 .open {
     display: block;
-    z-index: 8;
+    z-index: 10;
     position: fixed;
-    top: 4vh;
+    top: 5vh;
     right: 15vw;
 }
 
 .social {
-     width:100%;
-
-    ul {
-        @include flexBox(row, space-between, center)
-    }
+    width:100%;
+    @include flexBox(row, space-between, center);
 
     a {
         color: white;
@@ -66,7 +64,7 @@ h1 {
         transition: text-shadow 0.5s;
 
         &:hover {
-            text-shadow: 5px 5px white;
+            text-shadow: 5px 5px rgba(255, 255, 255, 0.582);
         }
 
         &:visited {
@@ -75,48 +73,50 @@ h1 {
     }
 }
 
-.siteNav {
+nav {
     background-color: white;
     border: 2px solid $accentColour2;
     @include bRadius();
 
     li {
+        text-align: left;
+        z-index: 1;
+    }
 
-        a {
-            color: $accentColour1;
-            font-weight: 700;
-            display: block;
-            padding: 10px;
+    a {
+        color: $accentColour1;
+        text-decoration: none;
+        font-weight: 700;
+        display: block;
+        padding: 10px;
+        position: relative;
 
-             &:before {
-                content: "";
-                position: absolute;
-                z-index: 2;
-                height:100%;
-                width: 0px;
-                bottom:0;
-                left: 0;
-                transition: width ease-in-out 0.3s; 
-            }
-
-            &:hover:before {
-                width: 36px;
-                background-color: $accentColour2;
-                z-index: 5;
-            }
-
-
-        }
-        &:first-child a:before { 
-            border-top-left-radius: 13px;
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            height:100%;
+            width: 0px;
+            bottom:0;
+            top:0;
+            left: 0;
+            transition: width ease-in-out 0.3s; 
         }
 
-        // icons in nav
-        i {
-            margin-right: 15px;
-            color: white;
-            z-index: 10;
+        &:hover::before {
+            width: 36px;
+            background-color: $accentColour2;
         }
+    }
 
+    li:first-child a:before { 
+        border-top-left-radius: 13px;
+    }
+
+    // icons in nav
+    i {
+        color: white;
+        margin-right: 15px;
+        z-index: 5;
     }
 }

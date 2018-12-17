@@ -12,25 +12,27 @@ myApp.nav = () => {
         $(".menu").toggleClass("turn");
 
         // different actions if nav is open or closed
-        $(".siteNav").hasClass("open") ? myApp.closeNav() : myApp.openNav()
+        $("nav").hasClass("open") ? myApp.closeNav() : myApp.openNav()
     })
 }
 
 // get halp with this
 myApp.openNav = () => {
-    $(".siteNav").toggleClass("open closed");
+    $("nav").toggleClass("open closed");
     $(".open").animate({
         width: "70vw"
     });
 }
 
 myApp.closeNav = () => {
-    $(".siteNav").animate({
+    $("nav").animate({
         width: "0vw",
     });
     // can i add a then?? no?
-    $(".siteNav").toggleClass("open closed");
-    $(".menu").toggleClass("turn");
+    $("nav").toggleClass("open closed");
+
+    $(".menu").hasClass("turn") ? $(".menu").addClass("turn") : null
+    
 }
 
 myApp.init = () => {
