@@ -33,7 +33,11 @@ h1 {
     top:1vh;
     right:2vw;
     cursor: pointer;
-    transition: transform 0.5s;
+    transition: transform 0.5s, text-shadow 0.5s;
+
+    &:hover {
+        text-shadow: 5px 5px rgba(255, 255, 255, 0.582);
+    }
 }
 
 .turn {
@@ -77,6 +81,8 @@ nav {
     background-color: white;
     border: 2px solid $accentColour2;
     @include bRadius();
+    overflow-y: hidden;
+    max-height: 202px;
 
     li {
         text-align: left;

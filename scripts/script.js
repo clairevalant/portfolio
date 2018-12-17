@@ -31,7 +31,10 @@ myApp.closeNav = () => {
     // can i add a then?? no?
     $("nav").toggleClass("open closed");
 
-    $(".menu").hasClass("turn") ? $(".menu").addClass("turn") : null
+    // flip the menu on navigation selection
+    $(".menu").hasClass("turn") ? $(".menu").removeClass("turn")
+     : null;
+    
     
 }
 
