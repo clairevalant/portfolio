@@ -1,16 +1,38 @@
 // Header styles
 
+header {
+    background-color: $accentColour1;
+}
+
 // nav styling
 
 .menu {
-    height: 5rem;
+    color: white;
+    font-size: 4rem;
     position: fixed;
-    top:10vh;
-    left:0;
+    padding: 5px 10px;
+    top:1vh;
+    right:2vw;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.turn {
+    transform: rotate(-90deg);
+}
+
+.open {
+    display: block;
+    z-index: 10;
+    position: fixed;
+    top: 4vh;
+    right: 54px;
+    width: 70vw;
 }
 
 nav {
-    // background-color: ;
+    display: none;
+    background-color: white;
     border: 2px solid $accentColour2;
     @include bRadius();
 
@@ -46,13 +68,8 @@ nav {
 
 
         }
-
-        // &:first-child a:before { 
-        //     border-top-right-radius: 13px;
-        // }
-
-        &:last-child a:before { 
-            border-bottom-left-radius: 13px;
+        &:first-child a:before { 
+            border-top-left-radius: 13px;
         }
 
         // icons in nav
@@ -65,6 +82,7 @@ nav {
 }
 
 h1 {
+    color: white;
     font-size: 5rem;
     font-family: $titleFont;
 }
