@@ -2,7 +2,7 @@
 
 #contact {
     background-color: $mainColour;
-    height: 88vh;
+    height: calc(100vh - 50px);
 
     h2 {
         font-family: $titleFont;

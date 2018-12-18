@@ -1,2 +1,31 @@
 // Media queries (mobile first)
 
+@media only screen and (min-width: 450px) {
+
+    // make skill icons display evenly
+    #skills .iconContainer {
+        width: 365px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #skills .iconContainer {
+        width: 456px;
+        font-size: 7rem;
+
+        img {
+            height: 6.7rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    #skills .iconContainer {
+        width: 680px;
+        font-size: 7rem;
+
+        img {
+            height: 6.7rem;
+        }
+    }
+}

@@ -3,17 +3,15 @@
 #skills {
     background-color: $accentColour2;
 
-    li {
-        list-style-type: square;
-        margin: 10px auto;
-    }
-
-    // add labels to icons when mobile user clicks !!
-    .iconContainer {
-        @include bRadius();
-        font-size: 4rem;
-        background: rgba(255, 255, 255, 0.555);
-        text-align: center;
+    ul {
+        margin: 0 auto;
+        padding: 0;
+        width: 70%;
+    
+        li {
+            list-style-type: square;
+            margin: 10px auto;
+        }
     }
 
     p {
@@ -28,3 +26,13 @@
         color: $accentColour;
     }
 }
+
+ // add labels to icons when mobile user clicks !!
+    .iconContainer {
+        width: 255px;
+        margin: 0 auto;
+        @include bRadius();
+        font-size: 4rem;
+        background: rgba(255, 255, 255, 0.555);
+        text-align: center;
+    }

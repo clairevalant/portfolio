@@ -7,22 +7,16 @@
         color: $accentColour1;
     }
 
-    .screenshot {
-        position: relative;
-    }
-
-    .shot {
-        border-radius: 5px;
-        // min-width: 200px;
-        width:60%;
-        position: absolute;
-        top:0;
-        left:0;
-    }
-
-    .laptop {
+    .screenshot{
         width: 100%;
         max-width: 500px;
+        margin: 0 auto 1em 0;
     }
+}
+
+.tools {
+    color: $accentColour;
+    font-size: 1.3rem;
+    margin-bottom: 1em;
 }
 

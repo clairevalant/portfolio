@@ -10,8 +10,8 @@ header {
         // display: none;
         width: 50vw;
         position: absolute;
-        top:-56px;
-        left: -32px;
+        top: -7.5vh;
+        left: -11.2vw;
     }
 
     .wave1 {
@@ -24,16 +24,18 @@ header {
     .dots {
         width: 33vw;
         position: absolute;
-        bottom: -95px;
+        bottom: -9.5vh;
         right: 6px;
+        z-index: 10;
     }
 
     .wave {
         transform: rotate(90deg);
         width: 40vw;
         position: absolute;
-        bottom: -40px;
+        bottom: -7vh;
         left: 0px;
+        z-index: 10;
     }
 
     .wrapper {
@@ -55,12 +57,13 @@ h1 {
 // nav styling
 
 .menu {
+    z-index: 20;
     color: black;
-    font-size: 4rem;
+    font-size: 5rem;
     position: fixed;
     padding: 5px 10px;
-    top:1vh;
-    right:2vw;
+    top: 7vh;
+    right: 0vw;
     cursor: pointer;
     transition: transform 0.5s, text-shadow 0.5s;
 
@@ -84,17 +87,17 @@ h1 {
     display: block;
     z-index: 10;
     position: fixed;
-    top: 5vh;
-    right: 15vw;
+    top: 11.7vh;
+    right: 18vw;
 }
 
 .social {
-    width:80%;
+    width: 210px;
     @include flexBox(row, space-between, center);
 
     a {
         color: white;
-        font-size: 2rem;
+        font-size: 3rem;
         transition: text-shadow 0.5s;
 
         &:hover {
@@ -112,7 +115,7 @@ nav {
     border: 2px solid $accentColour2;
     @include bRadius();
     overflow-y: hidden;
-    max-height: 202px;
+    max-height: 210px;
 
     li {
         text-align: left;
