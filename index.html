@@ -15,8 +15,8 @@
 <body>
 
     <header id="home">
-        <img class="grid" src="assets/grid1.svg" alt="" aria-hidden="true">
-        <img class="wave1" src="assets/wave1.svg" alt="" aria-hidden="true">
+        <img class="grid" src="./assets/grid1.svg" alt="" aria-hidden="true">
+        <img class="wave1" src="./assets/wave1.svg" alt="" aria-hidden="true">
         
         <div class="wrapper">
             <nav class="siteNav closed">
@@ -40,8 +40,8 @@
             </ul>
         </div>
 
-        <img class="wave" src="assets/wave.svg" alt="" aria-hidden="true">
-        <img class="dots" src="assets/dotGridNine.svg" alt="" aria-hidden="true">
+        <img class="wave" src="./assets/wave.svg" alt="" aria-hidden="true">
+        <img class="dots" src="./assets/dotGridNine.svg" alt="" aria-hidden="true">
 
         <i class="menu fas fa-ellipsis-v"></i>
     </header>
@@ -60,7 +60,7 @@
             <p>In my spare time, you can find me <a href="https://www.pressreader.com/canada/the-peterborough-examiner/20171010/281930248198999" target="_blank">drawing and painting</a>, rollerskating, playing guitar, singing, doing small <a href="https://www.instagram.com/crummyclub.pokes/" target="_blank">tattoos</a>, and petting dogs <i class="far fa-smile"></i></p>
         </div>
 
-        <img class="wave2" src="assets/wave.svg" alt="" aria-hidden="true">
+        <img class="wave2" src="./assets/wave.svg" alt="" aria-hidden="true">
     </section>
 
     <section id="work">
@@ -71,47 +71,84 @@
 
             <h2>Here's what I've made</h2>
 
-            <div class="project1">
-                <h3>Weather Wardrobe</h3>
+            <div class="project project1">
+                
+                <div class="half right">
+                    <!-- Laptop by Valeriy from the Noun Project -->
+                    <img class="screenshot" src="./assets/weatherwardrobeFinal.png" alt="Screenshot of Weather Wadrobe on desktop.">
+                    
+                    <div class="tools">Dark Sky API | Google Places API | Pair programming </div>
 
-                <!-- Laptop by Valeriy from the Noun Project -->
-                <img class="screenshot" src="assets/weatherwardrobeFinal.png" alt="Screenshot of Weather Wadrobe on desktop.">
-            
-                <div class="tools">Dark Sky API | Google Places API | </div>
+                </div>
+                
+                <div class="half left">
+                    <h3>Weather Wardrobe</h3>
+                    <div class="description">Weather Wardrobe, made with a partner, helps you plan what to wear for trips in the distant future by averaging the past five years' high and low temperatures using the Dark Sky API and lots of math.</div>
 
-                <div class="description">Weather Wardrobe helps you plan what to wear for trips in the distant future by averaging the past five years' high and low temperatures using the Dark Sky API and lots of math.<a href="https://github.com/clairevalant/Project4_Emma_Claire" target="_blank">View on Github.</a> </div>
+                    <div class="projLinks">
+                        <a href="https://clementineindustries.github.io/Project4_Emma_Claire/" target="_blank">Live</a>
+                        <a href="https://github.com/clairevalant/Project4_Emma_Claire" target="_blank">Github</a>
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="project2">
-                <h3>Toronto Tattoo Tinder</h3>
+            <div class="project project2">
+                
+                <div class="half left">
+                    <img class="screenshot" src="./assets/tttFinal.png" alt="Screenshot of Toronto Tattoo Tinder on desktop.">
+                    
+                    <div class="tools"> Javascript | jQuery Smooth Scroll</div>
+                </div>
+                
+                <div class="half right">
+                    <h3>Toronto Tattoo Tinder</h3>
 
-                <img class="screenshot" src="assets/tttFinal.png" alt="Screenshot of Toronto Tattoo Tinder on desktop.">
+                    <div class="description">If you're indecisive about what tattoo to get in Toronto, take a quick quiz and find the perfect artist match for you! The searching algorithm is very dry.</div>
 
-                <div class="tools"> Javascript | jQuery Smooth Scroll</div>
-
-                <div class="description">If you're indecisive about what tattoo to get in Toronto, take a quick quiz and find the perfect artist match for you! The searching algorithm is very dry.<a href="https://github.com/clairevalant/claire_valant_project3" target="_blank">View on Github.</a></div>
+                    <div class="projLinks">
+                        <a href="http://clairevalant.com/torontotattootinder/" target="_blank">Live</a>
+                        <a href="https://github.com/clairevalant/claire_valant_project3" target="_blank">Github</a>
+                    </div>
+                </div>
 
             </div>
 
-            <div class="project3">
-                <h3>Summit PSD Conversion</h3>
+            <div class="project project3">
+                <div class="half right">
+                    <img class="screenshot" src="./assets/summitFinal.png" alt="Screenshot of Summit on desktop.">
+                    <div class="tools">Floats | Zeppelin PSD tool</div>
+                </div>
+                
+                <div class="half left">
+                    <h3>Summit PSD Conversion</h3>
+                    <!-- add in functional hamburger menu!!! -->
+                    <div class="description">Pixel-perfect and fully responsive PSD conversion.</div>
 
-                <img class="screenshot" src="assets/summitFinal.png" alt="Screenshot of Summit on desktop.">
-
-                <div class="tools">Floats | Zeppelin PSD tool</div>
-
-                <!-- add in functional hamburger menu!!! -->
-                <div class="description">Pixel-perfect and fully responsive PSD conversion.<a href="https://github.com/clairevalant/claire_valant_project1" target="_blank">View on Github.</a></div>
+                    <div class="projLinks">
+                        <a href="http://clairevalant.com/summit/" target="_blank">Live</a>
+                        <a href="https://github.com/clairevalant/claire_valant_project1" target="_blank">Github</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="project4">
-                <h3>Versus</h3>
+            <div class="project project4">
+                
+                <div class="half left">
+                    <img class="screenshot" src="./assets/versusFinal.png" alt="Screenshot of Versus on desktop.">
+                    <div class="tools">React | Goodreads API | React-Chart-js </div>
+                </div>
 
-                <img class="screenshot" src="assets/versusFinal.png" alt="Screenshot of Versus on desktop.">
+                <div class="half right">
+                    <h3>Versus</h3>
+                    <div class="description">Versus was a group collaboration. We used the Goodreads API to filter through returned works by a chosen author to display stats on their works over the years.</div>
 
-                <div class="tools">React | Goodreads API | React-Chart-js | Github Collaberation </div>
-                <div class="description">Versus was a group collaberation. We used the Goodreads API to filter through returned works by a chosen author to display stats on their works over the years.<a href="https://github.com/clairevalant/when-you-peaked" target="_blank">View on Github.</a></div>
+                    <div class="projLinks">
+                        <a href="https://versvs-2385d.firebaseapp.com/" target="_blank">Live</a>
+                        <a href="https://github.com/clairevalant/when-you-peaked" target="_blank">Github</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -129,7 +166,7 @@
                 <i class="fab fa-sass"></i>
                 <i class="fab fa-js-square" title="Javascript"></i>
                 <i class="fab fa-react" title="React"></i>
-                <img src="/assets/firebase.svg" alt="Firebase" title="Firebase">
+                <img src="/./assets/firebase.svg" alt="Firebase" title="Firebase">
                 <i class="fab fa-codepen"></i>
                 <i class="devicon-csharp-plain" title="C Sharp"></i>
                 <i class="fab fa-github-square" title="Github"></i>
@@ -146,7 +183,7 @@
                 <li>RESTful APIs</li>
                 <li>npm</li>
                 <li>Responsive design</li>
-                <li>Github collaberation</li>
+                <li>Github collaboration</li>
             </ul>
 
         </div>

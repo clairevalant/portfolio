@@ -10,13 +10,57 @@
     .screenshot{
         width: 100%;
         max-width: 500px;
-        margin: 0 auto 1em 0;
+        margin: 0 auto;
     }
+}
+
+.project {
+    width: 100%;
+    border-bottom: 4px dotted $accentColour1;
+    padding: 30px 0;
+
+    &:first-child {
+        margin-bottom: 20px;
+    }
+}
+
+.projLinks {
+    width: 100%;
+    margin-top: 30px;
+    @include flexBox();
+
+    a {
+        color: $accentColour2;
+        text-decoration: none;
+        padding: 10px;
+        border: 2px solid $accentColour2;
+        transition: background 0.3s, color 0.3s;
+        @include bRadius();
+
+        &:first-of-type {
+            margin-right: 10px;
+        }
+
+        &:hover {
+            color: white;
+            // text-decoration: none;
+            background: $accentColour2;
+        }
+
+        &:visited {
+            color: $accentColour1;
+        }
+    }
+}
+
+.half {
+    width: 100%;
+    @include flexBox(column, center, center);
 }
 
 .tools {
     color: $accentColour;
     font-size: 1.3rem;
-    margin-bottom: 1em;
+    margin-top: 30px;
 }
 

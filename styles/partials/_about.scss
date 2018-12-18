@@ -4,6 +4,20 @@
     background-color: $mainColour;
     position: relative;
 
+     a {
+        text-decoration: none;
+        position: relative;
+        color: $accentColour1;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:visited {
+            color: $accentColour;
+        }
+    }
+
     .fa-smile {
         color: $accentColour2;
     }
