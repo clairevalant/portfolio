@@ -2,10 +2,26 @@
 
 header {
     background-color: $accentColour1;
-    border-bottom: 11px dotted white;
     height: 100vh;
     color: white;
     text-align: center;
+    overflow-x: hidden;
+
+    .grid {
+        // display: none;
+        width: 50vw;
+        position: absolute;
+        top:-32px;
+        left: -32px;
+    }
+
+    .dots {
+        // transform: rotate(90deg);
+        width: 33vw;
+        position: absolute;
+        bottom: -20px;
+        right: 6px;
+    }
 
     .wrapper {
         @include flexBox(column, center, center);
@@ -60,7 +76,7 @@ h1 {
 }
 
 .social {
-    width:100%;
+    width:80%;
     @include flexBox(row, space-between, center);
 
     a {
@@ -97,6 +113,10 @@ nav {
         display: block;
         padding: 10px;
         position: relative;
+
+        &:visited {
+            color: $accentColour;
+        }
 
         &::before {
             content: "";

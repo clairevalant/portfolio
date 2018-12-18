@@ -9,6 +9,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.3;
     font-family: $bodyFont;
+    // overflow: hidden;
 }
 
 header,
@@ -36,7 +37,7 @@ section {
 }
 
 .wrapper {
-    width: 70vw;
+    width: 80vw;
 }
 
 ul {
@@ -55,7 +56,7 @@ h2 {
 section .outside {
     align-self: flex-start;
     position: relative;
-    top:22px;
-    left:-32px;
+    top:25px;
+    left:-25px;
 }
 

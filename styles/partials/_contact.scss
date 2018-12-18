@@ -9,11 +9,15 @@
     }
 }
 
+form {
+    @include flexBox(column, flex-end, flex-end)
+}
+
 input {
     @include bRadius();
     border:none;
     width:100%;
-    margin: 5px auto;
+    margin: 5px 0;
     padding: 10px 10px;
 
     &#name{
@@ -43,6 +47,6 @@ input {
     }
 
     &:focus {
-        box-shadow: 5px 5px 5px $darkColour;
+        box-shadow: 5px 5px 10px transparentize($darkColour,0.7);
     }
 }

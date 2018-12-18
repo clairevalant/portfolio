@@ -147,10 +147,20 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 header {
   background-color: #1614ee;
-  border-bottom: 11px dotted white;
   height: 100vh;
   color: white;
-  text-align: center; }
+  text-align: center;
+  overflow-x: hidden; }
+  header .grid {
+    width: 50vw;
+    position: absolute;
+    top: -32px;
+    left: -32px; }
+  header .dots {
+    width: 33vw;
+    position: absolute;
+    bottom: -20px;
+    right: 6px; }
   header .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -205,7 +215,7 @@ h1 {
   right: 15vw; }
 
 .social {
-  width: 100%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,6 +257,8 @@ nav {
     display: block;
     padding: 10px;
     position: relative; }
+    nav a:visited {
+      color: #e20000; }
     nav a::before {
       content: "";
       position: absolute;
@@ -307,7 +319,7 @@ section {
       color: #e20000; }
 
 .wrapper {
-  width: 70vw; }
+  width: 80vw; }
 
 ul {
   margin: 0;
@@ -322,8 +334,8 @@ section .outside {
   -ms-flex-item-align: start;
   align-self: flex-start;
   position: relative;
-  top: 22px;
-  left: -32px; }
+  top: 25px;
+  left: -25px; }
 
 #about {
   background-color: #f3f3f3; }
@@ -359,12 +371,27 @@ section .outside {
   #contact h2 {
     font-family: "Major Mono Display", monospace; }
 
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+
 input {
   border-top-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border: none;
   width: 100%;
-  margin: 5px auto;
+  margin: 5px 0;
   padding: 10px 10px; }
   input#name {
     border: 2px solid #e20000; }
@@ -385,8 +412,8 @@ input {
       background-color: #e20000;
       color: white; }
   input:focus {
-    -webkit-box-shadow: 5px 5px 5px #1a1a1a;
-    box-shadow: 5px 5px 5px #1a1a1a; }
+    -webkit-box-shadow: 5px 5px 10px rgba(26, 26, 26, 0.3);
+    box-shadow: 5px 5px 10px rgba(26, 26, 26, 0.3); }
 
 footer {
   color: white;
