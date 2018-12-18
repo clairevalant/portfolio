@@ -148,7 +148,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 header {
   background-color: #1614ee;
   border-bottom: 11px dotted white;
-  height: 90vh;
+  height: 100vh;
   color: white;
   text-align: center; }
   header .wrapper {
@@ -175,7 +175,7 @@ h1 {
   font-family: "Major Mono Display", monospace; }
 
 .menu {
-  color: white;
+  color: black;
   font-size: 4rem;
   position: fixed;
   padding: 5px 10px;
@@ -187,8 +187,6 @@ h1 {
   -o-transition: transform 0.5s, text-shadow 0.5s;
   transition: transform 0.5s, text-shadow 0.5s;
   transition: transform 0.5s, text-shadow 0.5s, -webkit-transform 0.5s; }
-  .menu:hover {
-    text-shadow: 5px 5px rgba(255, 255, 255, 0.582); }
 
 .turn {
   -webkit-transform: rotate(270deg);
@@ -353,7 +351,7 @@ input {
   border-bottom-right-radius: 15px;
   border: none;
   width: 100%;
-  margin: 5px;
+  margin: 5px auto;
   padding: 10px 10px; }
   input#name {
     border: 2px solid #e20000; }

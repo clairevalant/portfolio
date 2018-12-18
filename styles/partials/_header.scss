@@ -3,7 +3,7 @@
 header {
     background-color: $accentColour1;
     border-bottom: 11px dotted white;
-    height: 90vh;
+    height: 100vh;
     color: white;
     text-align: center;
 
@@ -26,7 +26,7 @@ h1 {
 // nav styling
 
 .menu {
-    color: white;
+    color: black;
     font-size: 4rem;
     position: fixed;
     padding: 5px 10px;
@@ -36,7 +36,8 @@ h1 {
     transition: transform 0.5s, text-shadow 0.5s;
 
     &:hover {
-        text-shadow: 5px 5px rgba(255, 255, 255, 0.582);
+        // a better hover effect here
+        // text-shadow: 5px 5px rgba(255, 255, 255, 0.582);
     }
 }
 
