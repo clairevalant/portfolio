@@ -3,8 +3,24 @@
 #skills {
     background-color: $accentColour2;
 
+    li {
+        list-style-type: square;
+        margin: 10px auto;
+    }
+
+    .iconContainer {
+        @include bRadius();
+        font-size: 3.5rem;
+        background: rgba(255, 255, 255, 0.555);
+        text-align: center;
+    }
+
+    p {
+        font-weight: 700;
+    }
+
     img {
-        height: 1.6rem;
+        height: 3rem;
     }
 
     .fa-hammer {
