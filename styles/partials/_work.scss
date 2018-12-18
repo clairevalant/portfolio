@@ -6,4 +6,23 @@
     .fa-cubes {
         color: $accentColour1;
     }
+
+    .screenshot {
+        position: relative;
+    }
+
+    .shot {
+        border-radius: 5px;
+        // min-width: 200px;
+        width:60%;
+        position: absolute;
+        top:0;
+        left:0;
+    }
+
+    .laptop {
+        width: 100%;
+        max-width: 500px;
+    }
 }
+

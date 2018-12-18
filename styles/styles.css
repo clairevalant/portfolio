@@ -149,14 +149,13 @@ header {
   background-color: #1614ee;
   height: 100vh;
   color: white;
-  text-align: center;
-  overflow-x: hidden; }
+  text-align: center; }
   header .grid {
     width: 50vw;
     position: absolute;
     top: -56px;
     left: -32px; }
-  header .wave {
+  header .wave1 {
     width: 50vw;
     position: absolute;
     top: 40px;
@@ -166,7 +165,7 @@ header {
     position: absolute;
     bottom: -95px;
     right: 6px; }
-  header .wave1 {
+  header .wave {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
@@ -303,6 +302,9 @@ body {
   line-height: 1.3;
   font-family: "B612 Mono", monospace; }
 
+img {
+  width: 100%; }
+
 header,
 section,
 footer {
@@ -351,14 +353,33 @@ section .outside {
   left: -25px; }
 
 #about {
-  background-color: #f3f3f3; }
+  background-color: #f3f3f3;
+  position: relative; }
   #about .fa-smile {
     color: #f0cd04; }
+
+.wave2 {
+  width: 40vw;
+  position: absolute;
+  bottom: -96px;
+  right: 30px;
+  z-index: 5; }
 
 #work {
   border-bottom: 11px dotted #f3f3f3; }
   #work .fa-cubes {
     color: #1614ee; }
+  #work .screenshot {
+    position: relative; }
+  #work .shot {
+    border-radius: 5px;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #work .laptop {
+    width: 100%;
+    max-width: 500px; }
 
 #skills {
   background-color: #f0cd04; }
