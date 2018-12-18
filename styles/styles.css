@@ -154,13 +154,26 @@ header {
   header .grid {
     width: 50vw;
     position: absolute;
-    top: -32px;
+    top: -56px;
     left: -32px; }
+  header .wave {
+    width: 50vw;
+    position: absolute;
+    top: 40px;
+    right: 0px; }
   header .dots {
     width: 33vw;
     position: absolute;
-    bottom: -20px;
+    bottom: -95px;
     right: 6px; }
+  header .wave1 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    width: 40vw;
+    position: absolute;
+    bottom: -40px;
+    left: 0px; }
   header .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -355,13 +368,13 @@ section .outside {
   #skills .iconContainer {
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    font-size: 3.5rem;
+    font-size: 4rem;
     background: rgba(255, 255, 255, 0.555);
     text-align: center; }
   #skills p {
     font-weight: 700; }
   #skills img {
-    height: 3rem; }
+    height: 3.7rem; }
   #skills .fa-hammer {
     color: #e20000; }
 

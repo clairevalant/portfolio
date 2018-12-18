@@ -11,16 +11,30 @@ header {
         // display: none;
         width: 50vw;
         position: absolute;
-        top:-32px;
+        top:-56px;
         left: -32px;
     }
 
+    .wave {
+        width: 50vw;
+        position: absolute;
+        top: 40px;
+        right: 0px;
+    }
+
     .dots {
-        // transform: rotate(90deg);
         width: 33vw;
         position: absolute;
-        bottom: -20px;
+        bottom: -95px;
         right: 6px;
+    }
+
+    .wave1 {
+        transform: rotate(90deg);
+        width: 40vw;
+        position: absolute;
+        bottom: -40px;
+        left: 0px;
     }
 
     .wrapper {
