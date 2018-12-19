@@ -4,7 +4,7 @@ const myApp = {};
 
 // add smoothScroll
 myApp.smoothScroll = function () {
-    $("nav a").smoothScroll({});
+    $("header a").smoothScroll({});
 }
 
 myApp.nav = () => {
@@ -20,7 +20,7 @@ myApp.nav = () => {
 myApp.openNav = () => {
     $("nav").toggleClass("open closed");
     $(".open").animate({
-        width: "70vw"
+        width: "224px"
     });
 }
 
@@ -28,14 +28,12 @@ myApp.closeNav = () => {
     $("nav").animate({
         width: "0vw",
     });
-    // can i add a then?? no?
+
     $("nav").toggleClass("open closed");
 
     // flip the menu on navigation selection
     $(".menu").hasClass("turn") ? $(".menu").removeClass("turn")
      : null;
-    
-    
 }
 
 myApp.init = () => {

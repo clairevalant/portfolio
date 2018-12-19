@@ -2,15 +2,30 @@
 
 #contact {
     background-color: $mainColour;
-    height: calc(100vh - 50px);
+    // height: calc(100vh - 50px);
+    position: relative;
+
+    // .grid {
+    //     width: 100px;
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     z-index: 2;
+    // }
 
     h2 {
         font-family: $titleFont;
+        z-index: 3;
     }
 }
 
 form {
     @include flexBox(column, flex-end, flex-end)
+}
+
+.oneLine {
+    width: 100%;
+    @include flexBox(column, center, center);
 }
 
 input {

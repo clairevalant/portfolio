@@ -44,6 +44,18 @@ header {
 
     p {
         font-size: 1.4rem;
+        margin: 10px 0;
+
+        a {
+            padding: 5px;
+            text-decoration: none;
+            color: white;
+            transition: text-shadow 0.5s;
+        }
+
+        a:hover {
+            text-shadow: 5px 5px rgba(255, 255, 255, 0.582);
+        }
     }
 }
 
@@ -68,13 +80,16 @@ h1 {
     transition: transform 0.5s, text-shadow 0.5s;
 
     &:hover {
-        // a better hover effect here
-        // text-shadow: 5px 5px rgba(255, 255, 255, 0.582);
+        transform: translateY(5px);
     }
 }
 
 .turn {
     transform: rotate(270deg) translateY(-1vw);
+
+    &:hover {
+        transform: translateY(5px);
+    }
 }
 
 // will display:none mean SRs can still read it regardless of the element being on the screen?
@@ -93,6 +108,7 @@ h1 {
 }
 
 .social {
+    z-index: 10;
     width: 210px;
     @include flexBox(row, space-between, center);
 

@@ -15,6 +15,10 @@
     }
 }
 
+h3 {
+    margin-top:0;
+}
+
 .wave2 {
     // display: none;
     width: 130px;
@@ -61,6 +65,10 @@
             color: $accentColour1;
         }
     }
+}
+
+.left {
+    order: -1;
 }
 
 .half {
