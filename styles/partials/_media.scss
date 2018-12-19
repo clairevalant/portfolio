@@ -19,7 +19,31 @@
     }
 }
 
+@media only screen and (min-height: 570px) {
+    header .grid {
+        height: 35vh;
+    }
+}
+
 @media only screen and (min-width: 600px) {
+    header {
+        .wave {
+            width: 30vw;
+            bottom: -16vh;
+        }
+
+        .wave1{
+            width: 260px;
+            right: 70px;
+        }
+
+        .dots {
+            width: 20vw;
+            bottom: -8.5vh;
+        }
+    }
+
+
     #skills .iconContainer{
         width: auto;
         padding: 30px 10px;
@@ -52,6 +76,12 @@
 }
 
 @media only screen and (min-width: 800px) {
+    header .grid {
+        height: 49vh;
+        top: -3vh;
+        left: -2vw;
+    }
+
     #skills .iconContainer{
         i {
             font-size: 7rem;
@@ -133,5 +163,13 @@
 @media only screen and (min-width: 1000px) {
     form {
         width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header .wave {
+        width: 20vw;
+        bottom: -16.5vh;
+        left: 10vw;
     }
 }

@@ -151,19 +151,19 @@ header {
   color: white;
   text-align: center; }
   header .grid {
-    width: 50vw;
+    height: 28vh;
     position: absolute;
-    top: -7.5vh;
-    left: -11.2vw; }
+    top: 0;
+    left: 0; }
   header .wave1 {
-    width: 50vw;
     position: absolute;
-    top: 40px;
-    right: 0px; }
+    width: 180px;
+    top: 0;
+    right: 60px; }
   header .dots {
     width: 33vw;
     position: absolute;
-    bottom: -9vh;
+    bottom: -17vh;
     right: 6px;
     z-index: 8; }
   header .wave {
@@ -191,18 +191,24 @@ header {
     align-items: center; }
   header p {
     font-size: 1.4rem;
-    margin: 10px 0; }
+    margin: 10px 0;
+    z-index: 10; }
     header p a {
-      padding: 5px;
+      color: #1614ee;
+      background: #f3f3f3;
+      border: 2px solid #e20000;
+      border-top-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      padding: 10px;
       text-decoration: none;
-      color: white;
-      -webkit-transition: text-shadow 0.5s;
-      -o-transition: text-shadow 0.5s;
-      transition: text-shadow 0.5s; }
+      -webkit-transition: background 0.4s;
+      -o-transition: background 0.4s;
+      transition: background 0.4s; }
     header p a:hover {
-      text-shadow: 5px 5px rgba(255, 255, 255, 0.582); }
+      background: #f0cd04; }
 
 h1 {
+  z-index: 10;
   color: white;
   font-size: 5rem;
   margin: 10px auto;
@@ -243,13 +249,14 @@ h1 {
 .open {
   background: #1614ee;
   display: block;
-  z-index: 10;
+  z-index: 100;
   position: fixed;
   top: 11.7vh;
   right: 18vw; }
 
 .social {
   z-index: 10;
+  margin-bottom: 10px;
   width: 210px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,14 +290,13 @@ nav {
   overflow-y: hidden;
   max-height: 232px; }
   nav li {
-    text-align: left;
-    z-index: 1; }
+    text-align: left; }
   nav a {
     color: white;
     text-decoration: none;
     font-weight: 700;
     display: block;
-    padding: 10px;
+    padding: 7px;
     position: relative; }
     nav a:visited {
       color: #f0cd04; }
@@ -424,22 +430,21 @@ h3 {
   align-items: center; }
   .projLinks a {
     font-weight: 700;
-    color: #f0cd04;
+    color: #1614ee;
     text-decoration: none;
     padding: 10px;
     border: 2px solid #f0cd04;
-    -webkit-transition: background 0.3s, color 0.3s;
-    -o-transition: background 0.3s, color 0.3s;
-    transition: background 0.3s, color 0.3s;
+    -webkit-transition: background 0.3s, color 0.3s, border 0.3s;
+    -o-transition: background 0.3s, color 0.3s, border 0.3s;
+    transition: background 0.3s, color 0.3s, border 0.3s;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px; }
     .projLinks a:first-of-type {
       margin-right: 10px; }
     .projLinks a:hover {
-      color: white;
-      background: #f0cd04; }
-    .projLinks a:visited {
-      color: #1614ee; }
+      color: #f0cd04;
+      background: #1614ee;
+      border: 2px solid #1614ee; }
 
 .left {
   -webkit-box-ordinal-group: 0;
@@ -600,7 +605,20 @@ footer {
     #skills .iconContainer img {
       height: 1.7rem; } }
 
+@media only screen and (min-height: 570px) {
+  header .grid {
+    height: 35vh; } }
+
 @media only screen and (min-width: 600px) {
+  header .wave {
+    width: 30vw;
+    bottom: -16vh; }
+  header .wave1 {
+    width: 260px;
+    right: 70px; }
+  header .dots {
+    width: 20vw;
+    bottom: -8.5vh; }
   #skills .iconContainer {
     width: auto;
     padding: 30px 10px;
@@ -645,6 +663,10 @@ footer {
     padding: 15px; } }
 
 @media only screen and (min-width: 800px) {
+  header .grid {
+    height: 49vh;
+    top: -3vh;
+    left: -2vw; }
   #skills .iconContainer i {
     font-size: 7rem; }
   #skills .iconContainer img {
@@ -721,3 +743,9 @@ footer {
 @media only screen and (min-width: 1000px) {
   form {
     width: 70%; } }
+
+@media only screen and (min-width: 1200px) {
+  header .wave {
+    width: 20vw;
+    bottom: -16.5vh;
+    left: 10vw; } }

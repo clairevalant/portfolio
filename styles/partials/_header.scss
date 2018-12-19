@@ -7,24 +7,23 @@ header {
     text-align: center;
 
     .grid {
-        // display: none;
-        width: 50vw;
+        height: 28vh;
         position: absolute;
-        top: -7.5vh;
-        left: -11.2vw;
+        top: 0;
+        left: 0;
     }
 
     .wave1 {
-        width: 50vw;
         position: absolute;
-        top: 40px;
-        right: 0px;
+        width: 180px;
+        top: 0;
+        right: 60px;
     }
 
     .dots {
         width: 33vw;
         position: absolute;
-        bottom: -9vh;
+        bottom: -17vh;
         right: 6px;
         z-index: 8;
     }
@@ -45,21 +44,26 @@ header {
     p {
         font-size: 1.4rem;
         margin: 10px 0;
+        z-index: 10;
 
         a {
-            padding: 5px;
+            color:$accentColour1;
+            background: $mainColour;
+            border: 2px solid $accentColour;
+            @include bRadius();
+            padding: 10px;
             text-decoration: none;
-            color: white;
-            transition: text-shadow 0.5s;
+            transition: background 0.4s;
         }
 
         a:hover {
-            text-shadow: 5px 5px rgba(255, 255, 255, 0.582);
+            background:$accentColour2;
         }
     }
 }
 
 h1 {
+    z-index: 10;
     color: white;
     font-size: 5rem;
     margin: 10px auto;
@@ -101,7 +105,7 @@ h1 {
 .open {
     background: $accentColour1;
     display: block;
-    z-index: 10;
+    z-index: 100;
     position: fixed;
     top: 11.7vh;
     right: 18vw;
@@ -109,6 +113,7 @@ h1 {
 
 .social {
     z-index: 10;
+    margin-bottom: 10px;
     width: 210px;
     @include flexBox(row, space-between, center);
 
@@ -136,7 +141,6 @@ nav {
 
     li {
         text-align: left;
-        z-index: 1;
     }
 
     a {
@@ -144,7 +148,7 @@ nav {
         text-decoration: none;
         font-weight: 700;
         display: block;
-        padding: 10px;
+        padding: 7px;
         position: relative;
 
         &:visited {

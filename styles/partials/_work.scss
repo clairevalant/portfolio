@@ -45,11 +45,11 @@ h3 {
 
     a {
         font-weight: 700;
-        color: $accentColour2;
+        color: $accentColour1;
         text-decoration: none;
         padding: 10px;
         border: 2px solid $accentColour2;
-        transition: background 0.3s, color 0.3s;
+        transition: background 0.3s, color 0.3s, border 0.3s;
         @include bRadius();
 
         &:first-of-type {
@@ -57,13 +57,14 @@ h3 {
         }
 
         &:hover {
-            color: white;
-            background: $accentColour2;
+            color: $accentColour2;
+            background: $accentColour1;
+            border: 2px solid $accentColour1;
         }
 
-        &:visited {
-            color: $accentColour1;
-        }
+        // &:visited {
+        //     color: $accentColour1;
+        // }
     }
 }
 
