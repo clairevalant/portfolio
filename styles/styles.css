@@ -453,9 +453,9 @@ section .outside {
     color: #e20000; }
 
 .iconContainer {
-  padding: 30px 0 30px 20%;
-  width: 100%;
-  margin: 0 auto;
+  padding: 30px 0 30px 10%;
+  width: 80%;
+  margin: 20px auto 0 auto;
   border-top-left-radius: 15px;
   border-bottom-right-radius: 15px;
   font-size: 1.7rem;
@@ -495,11 +495,20 @@ input {
   padding: 10px; }
   input#name {
     border: 2px solid #e20000; }
+    input#name:focus {
+      -webkit-box-shadow: 7px 7px 15px rgba(226, 0, 0, 0.3);
+      box-shadow: 7px 7px 15px rgba(226, 0, 0, 0.3); }
   input#email {
     border: 2px solid #f0cd04; }
+    input#email:focus {
+      -webkit-box-shadow: 7px 7px 15px rgba(240, 205, 4, 0.3);
+      box-shadow: 7px 7px 15px rgba(240, 205, 4, 0.3); }
   input#message {
     border: 2px solid #1614ee;
     height: 15vh; }
+    input#message:focus {
+      -webkit-box-shadow: 7px 7px 15px rgba(22, 20, 238, 0.3);
+      box-shadow: 7px 7px 15px rgba(22, 20, 238, 0.3); }
   input[type="submit"] {
     width: auto;
     background-color: white;
@@ -511,9 +520,6 @@ input {
     input[type="submit"]:hover {
       background-color: #e20000;
       color: white; }
-  input:focus {
-    -webkit-box-shadow: 5px 5px 10px rgba(26, 26, 26, 0.3);
-    box-shadow: 5px 5px 10px rgba(26, 26, 26, 0.3); }
 
 footer {
   color: white;
@@ -538,16 +544,16 @@ footer {
 
 @media only screen and (min-width: 400px) {
   #skills .iconContainer {
-    padding: 30px 0 30px 30%; }
+    padding: 30px 0 30px 20%; }
     #skills .iconContainer i {
-      font-size: 3rem; }
+      font-size: 2rem; }
     #skills .iconContainer img {
-      height: 2.7rem; } }
+      height: 1.7rem; } }
 
 @media only screen and (min-width: 600px) {
   #skills .iconContainer {
     width: auto;
-    padding: 30px;
+    padding: 30px 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -571,10 +577,10 @@ footer {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
+      -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
+      -ms-flex-direction: column;
+      flex-direction: column;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
@@ -582,8 +588,19 @@ footer {
       -ms-flex-align: center;
       align-items: center;
       margin: 5px;
-      width: calc(100% / 4); }
+      width: calc((100% / 4) - 10px); }
       #skills .iconContainer .skill:last-of-type {
-        display: none; }
-    #skills .iconContainer span {
-      display: none; } }
+        display: none; } }
+
+@media only screen and (min-width: 800px) {
+  #skills .iconContainer i {
+    font-size: 7rem; }
+  #skills .iconContainer img {
+    height: 6.7rem; } }
+
+@media only screen and (min-width: 1000px) {
+  #skills .iconContainer {
+    width: 100%; }
+    #skills .iconContainer .skill {
+      margin: 10px 5px;
+      width: calc((100% / 6) - 10px); } }

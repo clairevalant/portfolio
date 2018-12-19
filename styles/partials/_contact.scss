@@ -22,15 +22,27 @@ input {
 
     &#name{
          border: 2px solid $accentColour;
+
+        &:focus {
+            box-shadow: 7px 7px 15px transparentize($accentColour,0.7);
+        }
     }
 
     &#email{
         border: 2px solid $accentColour2;
+
+        &:focus {
+            box-shadow: 7px 7px 15px transparentize($accentColour2,0.7);
+        }
     }
 
     &#message {
          border: 2px solid $accentColour1;
          height: 15vh;
+
+         &:focus {
+            box-shadow: 7px 7px 15px transparentize($accentColour1,0.7);
+        }
     }
 
     &[type="submit"] {
@@ -44,9 +56,5 @@ input {
             background-color: $accentColour;
             color: white;
         }
-    }
-
-    &:focus {
-        box-shadow: 5px 5px 10px transparentize($darkColour,0.7);
     }
 }

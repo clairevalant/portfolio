@@ -4,14 +4,14 @@
 
     // make skill icons display evenly
     #skills .iconContainer {
-        padding: 30px 0 30px 30%;
+        padding: 30px 0 30px 20%;
 
         i {
-            font-size: 3rem;
+            font-size: 2rem;
         }
 
         img {
-            height: 2.7rem;
+            height: 1.7rem;
         }
     }
 }
@@ -19,7 +19,7 @@
 @media only screen and (min-width: 600px) {
     #skills .iconContainer{
         width: auto;
-        padding: 30px;
+        padding: 30px 10px;
         @include flexBox();
         flex-wrap: wrap;
 
@@ -32,21 +32,38 @@
         }
 
         .skill {
-            @include flexBox();
+            @include flexBox(column, center, center);
             margin: 5px;
-            width: calc(100% / 4);
+            width: calc((100% / 4) - 10px);
 
+            // there were thirteen skills so to make a nice grid, get rid of one:
             &:last-of-type {
                 display: none;
             }
         }
+    }
+}
 
-        span {
-            display: none;
+@media only screen and (min-width: 800px) {
+    #skills .iconContainer{
+        i {
+            font-size: 7rem;
+        }
+
+        img {
+            height: 6.7rem;
         }
     }
 }
 
-@media only screen and (min-width: 850px) {
-    
+@media only screen and (min-width: 1000px) {
+    #skills .iconContainer {
+        width: 100%;
+
+        .skill {
+            margin: 10px 5px;
+            width: calc((100% / 6) - 10px);
+        }
+
+    }
 }
