@@ -2,6 +2,7 @@
 
 #work {
     border-bottom: 11px dotted $mainColour;
+    position: relative;
 
     .fa-cubes {
         color: $accentColour1;
@@ -9,9 +10,18 @@
 
     .screenshot{
         width: 100%;
-        max-width: 500px;
+        max-width: 600px;
         margin: 0 auto;
     }
+}
+
+.wave2 {
+    // display: none;
+    width: 130px;
+    position: absolute;
+    top: -65px;
+    right: 27px;
+    z-index: 5;
 }
 
 .project {
@@ -30,11 +40,12 @@
     @include flexBox();
 
     a {
+        font-weight: 700;
         color: $accentColour2;
         text-decoration: none;
         padding: 10px;
         border: 2px solid $accentColour2;
-        transition: background 0.3s;
+        transition: background 0.3s, color 0.3s;
         @include bRadius();
 
         &:first-of-type {
@@ -42,7 +53,7 @@
         }
 
         &:hover {
-            // text-decoration: none;
+            color: white;
             background: $accentColour2;
         }
 
@@ -59,7 +70,7 @@
 
 .tools {
     color: $accentColour;
-    font-size: 1.3rem;
-    margin-top: 30px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
