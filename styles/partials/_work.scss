@@ -34,7 +34,7 @@
         text-decoration: none;
         padding: 10px;
         border: 2px solid $accentColour2;
-        transition: background 0.3s, color 0.3s;
+        transition: background 0.3s;
         @include bRadius();
 
         &:first-of-type {
@@ -42,7 +42,6 @@
         }
 
         &:hover {
-            color: white;
             // text-decoration: none;
             background: $accentColour2;
         }

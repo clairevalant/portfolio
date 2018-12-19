@@ -1,31 +1,52 @@
 // Media queries (mobile first)
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 400px) {
 
     // make skill icons display evenly
     #skills .iconContainer {
-        width: 365px;
+        padding: 30px 0 30px 30%;
+
+        i {
+            font-size: 3rem;
+        }
+
+        img {
+            height: 2.7rem;
+        }
     }
 }
 
 @media only screen and (min-width: 600px) {
-    #skills .iconContainer {
-        width: 456px;
-        font-size: 7rem;
+    #skills .iconContainer{
+        width: auto;
+        padding: 30px;
+        @include flexBox();
+        flex-wrap: wrap;
+
+        i {
+            font-size: 5rem;
+        }
 
         img {
-            height: 6.7rem;
+            height: 4.7rem;
+        }
+
+        .skill {
+            @include flexBox();
+            margin: 5px;
+            width: calc(100% / 4);
+
+            &:last-of-type {
+                display: none;
+            }
+        }
+
+        span {
+            display: none;
         }
     }
 }
 
 @media only screen and (min-width: 850px) {
-    #skills .iconContainer {
-        width: 680px;
-        font-size: 7rem;
-
-        img {
-            height: 6.7rem;
-        }
-    }
+    
 }

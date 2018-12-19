@@ -19,7 +19,7 @@
     }
 
     img {
-        height: 3.7rem;
+        height: 1.8rem;
     }
 
     .fa-hammer {
@@ -29,10 +29,17 @@
 
  // add labels to icons when mobile user clicks !!
     .iconContainer {
-        width: 255px;
+        padding: 30px 0 30px 20%;
+        width: 100%;
         margin: 0 auto;
         @include bRadius();
-        font-size: 4rem;
+        font-size: 1.7rem;
         background: rgba(255, 255, 255, 0.555);
-        text-align: center;
+        text-align: left;
+    }
+
+    .skill {
+        i {
+            font-size: 2rem;
+        }
     }
