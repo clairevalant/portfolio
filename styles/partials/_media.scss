@@ -139,7 +139,12 @@
         }
 
         .project {
+            padding: 50px 0;
             @include flexBox(row, space-between, flex-start);
+        }
+
+        .project4 {
+            padding-bottom: 0;
         }
 
         .half {
@@ -147,24 +152,34 @@
             align-items: flex-start;
         }
 
+        .left.half.captions {
+            text-align: right;
+            @include flexBox(column, flex-start, flex-end);
+
+            .projLinks {
+                justify-content: flex-end;
+            }
+        }
+
         .captions {
-            position: relative;
+            margin-top: 0;
             height: 45.8vh;
+            // position: relative;
         }
 
         .projLinks {
             justify-content: flex-start;
             // get an opinion on this!
-            position: absolute;
-            bottom:0;
+            // position: absolute;
+            // bottom:0;
         }
 
         .captions.left {
-            margin-right: 10px;
+            margin-right: 30px;
         }
 
         .captions.right {
-            margin-left: 10px;
+            margin-left: 30px;
         }
     }
 }

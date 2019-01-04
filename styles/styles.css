@@ -349,7 +349,7 @@ footer {
   align-items: center; }
 
 section {
-  padding: 30px 0; }
+  padding: 30px 0 60px 0; }
 
 .wrapper {
   width: 80vw; }
@@ -409,8 +409,9 @@ h3 {
   width: 100%;
   border-bottom: 4px dotted #1614ee;
   padding: 30px 0; }
-  .project:first-child {
-    margin-bottom: 20px; }
+
+.project4 {
+  border-bottom: none; }
 
 .projLinks {
   width: 100%;
@@ -471,6 +472,9 @@ h3 {
   color: #e20000;
   font-size: 1.5rem;
   margin-bottom: 10px; }
+
+.captions {
+  margin-top: 30px; }
 
 #skills {
   background-color: #f0cd04; }
@@ -575,25 +579,28 @@ input {
       color: white; }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: white;
   font-size: 1.3rem;
   background: #1614ee; }
+  footer p {
+    width: 100%;
+    text-align: center; }
   footer .fa-smile {
-    color: white; }
-  footer .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    color: white;
+    display: inline-block; }
 
 @media only screen and (min-width: 400px) {
   .menu {
@@ -711,6 +718,7 @@ footer {
     top: -110px;
     right: 67px; }
   #work .project {
+    padding: 50px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -724,6 +732,8 @@ footer {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start; }
+  #work .project4 {
+    padding-bottom: 0; }
   #work .half {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
@@ -731,19 +741,36 @@ footer {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start; }
+  #work .left.half.captions {
+    text-align: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+    #work .left.half.captions .projLinks {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
   #work .captions {
-    position: relative;
+    margin-top: 0;
     height: 45.8vh; }
   #work .projLinks {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start;
-    position: absolute;
-    bottom: 0; }
+    justify-content: flex-start; }
   #work .captions.left {
-    margin-right: 10px; }
+    margin-right: 30px; }
   #work .captions.right {
-    margin-left: 10px; } }
+    margin-left: 30px; } }
 
 @media only screen and (min-width: 1000px) {
   form {
