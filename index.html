@@ -19,14 +19,15 @@
     <title>Claire Valant, Front End Developer</title>
 </head>
 <body>
-    <i class="navToggle fas fa-ellipsis-v"></i>
+    <a class="skipLink" href="#about">Skip to main content</a>
+    <button class="navToggle"><i class="fas fa-ellipsis-v"></i></button>
     <nav class="rounded">
         <ul>
-            <li><i class="fas fa-home"></i><a href="#home">home</a></li>
-            <li><i class="far fa-smile"></i><a href="#about">about</a></li>
+            <li><a href="#home"><i class="fas fa-home"></i>home</a></li>
+            <li><a href="#about"><i class="far fa-smile"></i>about</a></li>
             <!-- <li><i class="fas fa-cubes"></i><a href="#work">work</a></li> -->
-            <li><i class="fas fa-hammer"></i><a href="#skills">skills</a></li>
-            <li><i class="far fa-envelope"></i><a href="#contact">contact</a></li>
+            <li><a href="#skills"><i class="fas fa-hammer"></i>skills</a></li>
+            <li><a href="#contact"><i class="far fa-envelope"></i>contact</a></li>
         </ul>
     </nav>
 
@@ -254,18 +255,18 @@
         <div class="wrapper">
             <h2>How do you do?</h2>
 
-            <p>Let's get in touch! I'm fun. Email me at <a href="mailto:valantclaire@gmail.com">valantclaire@gmail.com</a> or here:</p>
+            <p>Please get in touch. Please. Email me at <a href="mailto:valantclaire@gmail.com">valantclaire@gmail.com</a> or here:</p>
 
             <form action="https://formspree.io/valantclaire@gmail.com" method="POST">
                 <div class="oneLine">
                     <label for="name" class="visuallyhidden">Name</label>
-                    <input class="rounded" type="text" id="name" name="name" placeholder="name">
+                    <input class="rounded" type="text" id="name" name="name" placeholder="name" required>
                     <label for="email" class="visuallyhidden">Email address</label>
-                    <input class="rounded" type="email" id="email" name="name" placeholder="email address">
+                    <input class="rounded" type="email" id="email" name="name" placeholder="email address" required>
                 </div>
 
                 <label for="message" class="visuallyhidden">Message</label>
-                <textarea class="rounded" type="text" id="message" name="message" cols="30" rows="10" placeholder="hey, Claire!"></textarea>
+                <textarea class="rounded" type="text" id="message" name="message" cols="30" rows="10" placeholder="hey, Claire!" required></textarea>
                 <input class="rounded" type="submit" value="send message">
             </form>
         </div>

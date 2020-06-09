@@ -180,9 +180,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 .navToggle {
   z-index: 40;
   color: #1A2518;
+  background: transparent;
+  border: none;
   font-size: 5rem;
   position: fixed;
   padding: 5px 20px;
+  border-radius: 50%;
   top: 7vh;
   right: 0vw;
   cursor: pointer;
@@ -197,6 +200,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
           transform: translateY(5px);
 }
 
+.navToggle:focus i {
+  text-shadow: 0 0 16px #ffffff;
+}
+
 .turn {
   -webkit-transform: rotate(270deg) translateY(-1vw);
           transform: rotate(270deg) translateY(-1vw);
@@ -209,7 +216,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 nav {
   display: none;
-  width: 190px;
   z-index: 100;
   position: fixed;
   top: 11.7vh;
@@ -226,10 +232,20 @@ nav.open {
 
 nav li {
   text-align: left;
+}
+
+nav a {
+  color: #5154e8;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 7px 55px 7px 7px;
   position: relative;
 }
 
-nav li::before {
+nav a::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -243,17 +259,12 @@ nav li::before {
   transition: width ease-in-out 0.4s;
 }
 
-nav li:hover::before {
+nav a:hover::before {
   width: 100%;
 }
 
-nav a {
-  color: #5154e8;
-  text-decoration: none;
-  font-weight: 700;
-  display: inline;
-  text-align: right;
-  padding: 7px;
+nav a:focus {
+  background: #F0CD04;
 }
 
 nav i {
@@ -283,6 +294,7 @@ header .wave1 {
   width: 180px;
   top: 0;
   right: 60px;
+  display: none;
 }
 
 header .dots {
@@ -328,7 +340,7 @@ header ul {
 }
 
 header p {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 header p,
@@ -346,7 +358,7 @@ header .contactBtn {
   transition: background 0.4s;
 }
 
-header .contactBtn:hover {
+header .contactBtn:hover, header .contactBtn:focus {
   background: #F0CD04;
 }
 
@@ -383,7 +395,7 @@ header .social a {
   transition: color 0.5s;
 }
 
-header .social a:hover {
+header .social a:hover, header .social a:focus {
   color: #F0CD04;
 }
 
@@ -395,7 +407,7 @@ html {
 
 body {
   color: #1A2518;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   line-height: 1.6;
   font-family: "Montserrat", sans-serif;
 }
@@ -403,6 +415,19 @@ body {
 body,
 html {
   height: 100%;
+}
+
+.skipLink {
+  left: -100vw;
+  position: absolute;
+  color: #5154e8;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.skipLink:focus {
+  left: 50%;
+  color: #faf9f4;
 }
 
 header,
@@ -446,8 +471,8 @@ section a {
   transition: color 0.3s;
 }
 
-section a:hover {
-  color: #FF4242;
+section a:hover, section a:focus {
+  color: #E60000;
 }
 
 .wrapper {
@@ -464,7 +489,7 @@ ul li {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 20px 0;
   font-weight: 600;
   font-family: "Major Mono Display", monospace;
@@ -615,6 +640,11 @@ h3 {
   height: 1.8rem;
 }
 
+#skills i,
+#skills img {
+  margin-right: 10px;
+}
+
 .resume {
   font-size: 2rem;
   margin-top: 70px;
@@ -747,8 +777,9 @@ textarea[type="submit"] {
   transition: background-color 0.3s, color 0.3s;
 }
 
-input[type="submit"]:hover,
-textarea[type="submit"]:hover {
+input[type="submit"]:hover, input[type="submit"]:focus,
+textarea[type="submit"]:hover,
+textarea[type="submit"]:focus {
   background-color: #F0CD04;
 }
 
@@ -789,7 +820,7 @@ footer .fa-smile {
     right: 90px;
   }
   #skills .iconContainer {
-    padding: 30px 0 30px 20%;
+    padding: 30px;
   }
   #skills .iconContainer i {
     font-size: 2rem;
@@ -805,13 +836,16 @@ footer .fa-smile {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  header p {
-    font-size: 2rem;
-  }
-}
-
 @media only screen and (min-width: 600px) {
+  body {
+    font-size: 1.7rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  header p {
+    font-size: 3rem;
+  }
   header .wave {
     width: 30vw;
     bottom: -16vh;
@@ -819,6 +853,7 @@ footer .fa-smile {
   header .wave1 {
     width: 260px;
     right: 200px;
+    display: block;
   }
   header .dots {
     width: 20vw;
@@ -849,6 +884,10 @@ footer .fa-smile {
   #skills .iconContainer img {
     height: 4.7rem;
   }
+  #skills .iconContainer i,
+  #skills .iconContainer img {
+    margin-right: 0;
+  }
   #skills .iconContainer .skill {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -876,7 +915,7 @@ footer .fa-smile {
 
 @media only screen and (min-width: 800px) {
   nav {
-    font-size: 2.5rem;
+    font-size: 2rem;
     max-height: 280px;
   }
   header .grid {

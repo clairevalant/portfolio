@@ -4,9 +4,12 @@
 .navToggle {
     z-index: 40;
     color: $darkColour;
+    background: transparent;
+    border: none;
     font-size: 5rem;
     position: fixed;
     padding: 5px 20px;
+    border-radius: 50%;
     top: 7vh;
     right: 0vw;
     cursor: pointer;
@@ -15,6 +18,11 @@
     &:hover {
         transform: translateY(5px);
     }
+
+    &:focus i {
+        text-shadow: 0 0 16px #ffffff;
+    }
+    
 }
 
 .turn {
@@ -27,7 +35,7 @@
 
 nav {
     display: none;
-    width: 190px;
+    // width: 190px;
     z-index: 100;
     position: fixed;
     top: 11.7vh;
@@ -42,10 +50,20 @@ nav {
     }
 
     li {
-        text-align: left;
+        text-align: left;        
+    }
+
+    a {
+        color: $accentColour1;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 7px 55px 7px 7px;
         position: relative;
 
-         &::before {
+          &::before {
             content: "";
             position: absolute;
             z-index: -1;
@@ -61,16 +79,10 @@ nav {
         &:hover::before {
             width: 100%;
         }
-        
-    }
 
-    a {
-        color: $accentColour1;
-        text-decoration: none;
-        font-weight: 700;
-        display: inline;
-        text-align: right;
-        padding: 7px;
+        &:focus {
+            background: $accentColour2;
+        }
     }
 
     // icons in nav
