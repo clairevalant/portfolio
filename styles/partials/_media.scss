@@ -1,11 +1,11 @@
 // Media queries (mobile first)
 
 @media only screen and (min-width: 400px) {
-    .menu {
+    .navToggle {
         right: 2.5vw;
     }
 
-    .open {
+    nav {
         right: 90px;
     }
 
@@ -29,6 +29,12 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    header p {
+        font-size: 2rem;
+    }
+}
+
 @media only screen and (min-width: 600px) {
     header {
         .wave {
@@ -38,7 +44,7 @@
 
         .wave1{
             width: 260px;
-            right: 70px;
+            right: 200px;
         }
 
         .dots {
@@ -80,15 +86,16 @@
 }
 
 @media only screen and (min-width: 800px) {
-    .open {
+    nav {
     font-size: 2.5rem;
     max-height: 280px;
     }
 
     header .grid {
         height: 49vh;
-        top: -3vh;
-        left: -2vw;
+        top: -50px;
+        left: -50px;
+
     }
 
     #skills .iconContainer{
@@ -118,7 +125,7 @@
 }
 
 @media only screen and (min-width: 1000px) {
-    .menu {
+    .navToggle {
         right: 2.5vw;
     }
 
@@ -131,12 +138,13 @@
         }
     }
 
+    .wave2 {
+        width: 220px;
+        top: -110px;
+        right: 67px;
+    }
+    
     #work {
-        .wave2 {
-            width: 220px;
-            top: -110px;
-            right: 67px;
-        }
 
         .project {
             padding: 50px 0;
@@ -191,7 +199,7 @@
 }
 
 @media only screen and (min-width: 1200px) {
-    .open {
+    nav {
         right: 120px;
     }
 

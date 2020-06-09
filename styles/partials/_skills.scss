@@ -2,6 +2,13 @@
 
 #skills {
     background-color: $accentColour2;
+    border-top: 10px dotted $accentColour3;
+
+    h2:before {
+        content: '\f6e3';
+        font-weight: 600;
+        color: $accentColour;
+    }
 
     ul {
         margin: 0 auto;
@@ -21,10 +28,11 @@
     img {
         height: 1.8rem;
     }
+}
 
-    .fa-hammer {
-        color: $accentColour;
-    }
+.resume {
+    font-size: 2rem;
+    margin-top: 70px;
 }
 
  // add labels to icons when mobile user clicks !!
@@ -32,13 +40,18 @@
         padding: 30px 0 30px 10%;
         width: 80%;
         margin: 20px auto 0 auto;
-        @include bRadius();
         font-size: 1.7rem;
         background: rgba(255, 255, 255, 0.555);
         text-align: left;
     }
 
     .skill {
+        transition: transform 0.35s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
         i {
             font-size: 2rem;
         }

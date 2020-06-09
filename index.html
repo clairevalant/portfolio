@@ -3,35 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
-        crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="./assets/site.webmanifest">
+    <link rel="mask-icon" href="./assets/safari-pinned-tab.svg" color="#5154e8">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://kit.fontawesome.com/b6806e145d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=B612+Mono:400,700|Major+Mono+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Major+Mono+Display" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Claire Valant</title>
+    <title>Claire Valant, Front End Developer</title>
 </head>
 <body>
+    <i class="navToggle fas fa-ellipsis-v"></i>
+    <nav class="rounded">
+        <ul>
+            <li><i class="fas fa-home"></i><a href="#home">home</a></li>
+            <li><i class="far fa-smile"></i><a href="#about">about</a></li>
+            <!-- <li><i class="fas fa-cubes"></i><a href="#work">work</a></li> -->
+            <li><i class="fas fa-hammer"></i><a href="#skills">skills</a></li>
+            <li><i class="far fa-envelope"></i><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
 
-    <header id="home">
+    <header id="home"> 
         <img class="grid" src="./assets/grid1.svg" alt="" aria-hidden="true">
         <img class="wave1" src="./assets/wave1.svg" alt="" aria-hidden="true">
-        
-        <div class="wrapper">
-            <nav class="siteNav closed">
-                <ul>
-                    <li><a href="#home" onclick="myApp.closeNav()"><i class="fas fa-home"></i>home</a></li>
-                    <li><a href="#about" onclick="myApp.closeNav()"><i class="far fa-smile"></i>about</a></li>
-                    <li><a href="#work" onclick="myApp.closeNav()"><i class="fas fa-cubes"></i>work</a></li>
-                    <li><a href="#skills" onclick="myApp.closeNav()"><i class="fas fa-hammer"></i>skills</a></li>
-                    <li><a href="#contact" onclick="myApp.closeNav()"><i class="far fa-envelope"></i>contact</a></li>
-                </ul>
-            </nav>
 
+        <div class="wrapper">
             <h1>Claire Valant</h1>
 
-            <p>Front-end Web Developer</p>
+            <p>Front End Developer</p>
 
             <ul class="social">
                 <li><a href="https://github.com/clairevalant" title="GitHub" target="_blank"><i class="fab fa-github-square"></i></a></li>
@@ -39,28 +45,23 @@
                 <li><a href="https://twitter.com/claire_fix" title="Twitter" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
             </ul>
 
-            <p><a href="#contact">Say hello!</a></p>
+            <a class="rounded contactBtn" href="#contact">Say hello!</a>
 
         </div>
 
         <img class="wave" src="./assets/wave.svg" alt="" aria-hidden="true">
         <img class="dots" src="./assets/dotGridNine.svg" alt="" aria-hidden="true">
-
-        <i class="menu fas fa-ellipsis-v"></i>
     </header>
 
     <section id="about">
         
         <div class="wrapper">
-            <i class="outside far fa-smile"></i>
-
             <h2>Hello, I'm Claire</h2>
-
-            <p>I'm a front-end developer who loves colour and always appreciates alliteration. I'm well versed in industry best practices and I love to learn the newest stuff!</p>
-            
-            <p>Before learning development at HackerYou College of Technology, I received my honours bachelor in Physics from Trent University, where I also learned to code.</p>
-            
-            <p>In my spare time, you can find me <a href="https://www.pressreader.com/canada/the-peterborough-examiner/20171010/281930248198999" target="_blank">drawing and painting</a>, rollerskating, playing guitar, singing, doing small <a href="https://www.instagram.com/crummyclub.pokes/" target="_blank">tattoos</a>, and petting dogs <i class="far fa-smile"></i></p>
+            <p>I'm a skilled front end developer in Toronto’s West End. My background in physics, art, and customer service gives me the unique combination of logical thinking, creative problem solving, and compassion for my teammates and users.</p>
+            <p>Writing neat, scalable, and modular code is important to me. I care deeply that all users can easily interact with websites and applications I touch and that my team can easily pick up code I write.</p>
+            <p>I enjoy writing clear, concise documentation. Measurably improving processes for my team is my joy. Let me help you!</p>
+            <p>Most recently I’ve been getting into in devops and am currently working on getting AWS certifications.</p>
+            <p>In my spare time, you can find me <a href="https://www.pressreader.com/canada/the-peterborough-examiner/20171010/281930248198999" target="_blank">drawing and painting</a>, roller skating, playing guitar, educating myself on social justice issues, and doing small hand poked tattoos.</p>
         </div>
     </section>
 
@@ -88,7 +89,7 @@
                     <div class="description">Weather Wardrobe, made with partner Emma Hughes, helps you plan what to wear for trips in the distant future by averaging historical data from the Dark Sky API using tons of fun math.</div>
 
                     <div class="projLinks">
-                        <a href="https://clementineindustries.github.io/Project4_Emma_Claire/" target="_blank">Live</a>
+                        <a href="http://clairevalant.com/WeatherWardrobe/" target="_blank">Live</a>
                         <a href="https://github.com/clairevalant/Project4_Emma_Claire" target="_blank">GitHub</a>
                     </div>
 
@@ -129,7 +130,7 @@
 
                     <div class="tools">Floats | Zeppelin PSD tool</div>
 
-                    <!-- add in functional hamburger menu!!! -->
+                    <!-- add in functional hamburger navToggle!!! -->
                     <div class="description">Pixel-perfect and fully responsive PSD conversion.</div>
 
                     <div class="projLinks">
@@ -164,25 +165,9 @@
     <section id="skills">
         
         <div class="wrapper">
-            <i class="outside fas fa-hammer"></i>
-
             <h2>Here's what I've used</h2>
 
-            <div class="iconContainer">
-                <div class="skill">
-                    <i class="fab fa-html5" title="HTML5"></i>
-                    <span>HTML5</span>
-                </div>
-
-                <div class="skill">
-                    <i class="fab fa-css3-alt" title="CSS3"></i>
-                    <span>CSS3</span>
-                </div>
-
-                <div class="skill">
-                    <i class="fab fa-sass"></i>
-                    <span>Sass</span>
-                </div>
+            <div class="rounded iconContainer">
 
                 <div class="skill">
                     <i class="fab fa-js-square" title="JavaScript"></i>
@@ -190,8 +175,27 @@
                 </div>
 
                 <div class="skill">
+                    <img src="./assets/jquery.svg" alt="" title="jQuery">
+                    <span>jQuery</span>
+                </div>
+
+                <div class="skill">
                     <i class="fab fa-react" title="React"></i>
                     <span>React</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-html5" title="HTML5"></i>
+                    <span>HTML5</span>
+                </div>
+                
+                <div class="skill">
+                    <i class="fab fa-css3-alt" title="CSS3"></i>
+                    <span>CSS3</span>
+                </div>
+                
+                <div class="skill">
+                    <i class="fab fa-sass"></i>
+                    <span>Sass</span>
                 </div>
 
                 <div class="skill">
@@ -200,8 +204,8 @@
                 </div>
 
                 <div class="skill">
-                    <i class="fab fa-codepen"></i>
-                    <span>CodePen</span>
+                    <img src="./assets/webpackIcon.svg" alt="" title="Webpack">
+                    <span>Webpack</span>
                 </div>
 
                 <div class="skill">
@@ -210,13 +214,8 @@
                 </div>
 
                 <div class="skill">
-                    <img src="./assets/matlab1.svg" alt="" title="Matlab">
-                    <span>Matlab</span>
-                </div>
-
-                <div class="skill">
-                    <i class="fab fa-github-square" title="GitHub"></i>
-                    <span>GitHub</span>
+                    <i class="fab fa-npm" title="NPM"></i>
+                    <span>npm</span>
                 </div>
 
                 <div class="skill">
@@ -225,60 +224,55 @@
                 </div>
 
                 <div class="skill">
-                    <i class="devicon-visualstudio-plain" title="Visual Studio"></i>
-                    <span>VS Code</span>
+                    <i class="fab fa-aws" title="AWS"></i>
+                    <span>AWS</span>
                 </div>
 
                 <div class="skill">
-                    <i class="fab fa-raspberry-pi" title="Raspberry Pi"></i>
-                    <span>Raspberry Pi</span>
+                    <img src="./assets/matlab1.svg" alt="" title="Matlab">
+                    <span>Matlab</span>
                 </div>
-
-
 
             </div>
 
             <p>Plus some others:</p>
             <ul>
-                <li>CSS Grid</li>
-                <li>BEM variable naming convention</li>
-                <li>RESTful APIs</li>
-                <li>npm</li>
+                <li>Ansible</li>
+                <li>Terraform</li>
+                <li>REST APIs</li>
                 <li>Responsive design</li>
-                <li>GitHub collaboration</li>
+                <li>BEM variable naming convention</li>
             </ul>
 
+            <p class="resume">Check out my <a href="/hireme.pdf">resume</a> for more about my experience.</p>
         </div>
     </section>
 
     <section id="contact">
-        <!-- <img class="grid" src="/assets/grid1.svg" aria-hidden="true"> -->
+        <img class="wave2" src="./assets/wave.svg" alt="" aria-hidden="true">
         
         <div class="wrapper">
-            <i class="outside far fa-envelope"></i>
-
             <h2>How do you do?</h2>
 
-            <p>Get in touch to work together! Email me at <a href="mailto:valantclaire@gmail.com">valantclaire@gmail.com</a> or here:</p>
+            <p>Let's get in touch! I'm fun. Email me at <a href="mailto:valantclaire@gmail.com">valantclaire@gmail.com</a> or here:</p>
 
             <form action="https://formspree.io/valantclaire@gmail.com" method="POST">
                 <div class="oneLine">
                     <label for="name" class="visuallyhidden">Name</label>
-                    <input type="text" id="name" name="name" placeholder="name">
+                    <input class="rounded" type="text" id="name" name="name" placeholder="name">
                     <label for="email" class="visuallyhidden">Email address</label>
-                    <input type="email" id="email" name="name" placeholder="email address">
+                    <input class="rounded" type="email" id="email" name="name" placeholder="email address">
                 </div>
 
                 <label for="message" class="visuallyhidden">Message</label>
-                <input type="text" id="message" name="name" placeholder="message">
-                <input type="submit" value="send message">
+                <textarea class="rounded" type="text" id="message" name="message" cols="30" rows="10" placeholder="hey, Claire!"></textarea>
+                <input class="rounded" type="submit" value="send message">
             </form>
         </div>
     </section>
 
-    <!-- do i need a footer?? -->
     <footer>
-        <p><i class="far fa-copyright"></i> Claire Valant 2018 <i class="far fa-smile"></i></p>
+        <p><i class="far fa-copyright"></i> Claire Valant 2018 - 2020 <i class="far fa-smile"></i></p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

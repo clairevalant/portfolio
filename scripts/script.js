@@ -8,33 +8,36 @@ myApp.smoothScroll = function () {
 }
 
 myApp.nav = () => {
-    $(".menu").on("click", () => {        
-        $(".menu").toggleClass("turn");
+    const $nav = $("nav");
+    const $navToggle = $(".navToggle");
 
-        // different actions if nav is open or closed
-        $("nav").hasClass("open") ? myApp.closeNav() : myApp.openNav()
-    })
-}
+    // fn to remove event listener from document: we only need it hwen the nav is open
+    const removeClickListener = () => {
+        document.removeEventListener('click', outsideClickListener)        
+    }
+    // close nav if user clicks outside of nav or navToggle
+    const outsideClickListener = (event) => {        
+            if (!$(event.target).closest('nav').length && !$(event.target).closest('.navToggle').length){
+                $nav.removeClass('open');
+                $navToggle.removeClass('turn');
+                removeClickListener();
+            }
+    };
 
-// get halp with this
-myApp.openNav = () => {
-    $("nav").toggleClass("open closed");
-    $(".open").animate({
-        width: "224px"
+    $navToggle.on('click', (event) => {
+        if ($nav.hasClass('open')) {
+            $nav.removeClass('open');
+            $navToggle.removeClass('turn');
+            removeClickListener();
+        } else {
+            $nav.addClass('open');
+            $navToggle.addClass('turn');
+            document.addEventListener('click', outsideClickListener)
+        }
     });
-}
+    
+};
 
-myApp.closeNav = () => {
-    $("nav").animate({
-        width: "0vw",
-    });
-
-    $("nav").toggleClass("open closed");
-
-    // flip the menu on navigation selection
-    $(".menu").hasClass("turn") ? $(".menu").removeClass("turn")
-     : null;
-}
 
 myApp.init = () => {
     myApp.smoothScroll();

@@ -1,9 +1,14 @@
 // Header styles
 
 header {
+    // background-image: url('/assets/website-background.png');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // position: relative;
     background-color: $accentColour1;
     height: 100vh;
-    color: white;
+    color: $lightColour;
     text-align: center;
 
     .grid {
@@ -23,9 +28,9 @@ header {
     .dots {
         width: 33vw;
         position: absolute;
-        bottom: -17vh;
+        bottom: -12vh;
         right: 6px;
-        z-index: 8;
+        z-index: 30;
     }
 
     .wave {
@@ -38,149 +43,60 @@ header {
     }
 
     .wrapper {
+        z-index: 0;
+        position: fixed;
+        margin-top: 30px;
         @include flexBox(column, center, center);
     }
 
+    p,
+    ul {
+        margin: 0 0 10px;
+    }
+
     p {
-        font-size: 1.4rem;
-        margin: 10px 0;
-        z-index: 10;
+        font-size: 3rem;
+    }
 
-        a {
-            color:$accentColour1;
-            background: $mainColour;
-            border: 2px solid $accentColour;
-            @include bRadius();
-            padding: 10px;
-            text-decoration: none;
-            transition: background 0.4s;
-        }
+    p,
+    a {
+        font-weight: 600;
+    }
 
-        a:hover {
+    .contactBtn {
+        color:$accentColour1;
+        background: $lightColour;
+        border: 2px solid $accentColour;
+        padding: 10px;
+        text-decoration: none;
+        transition: background 0.4s;
+        
+        &:hover {
             background:$accentColour2;
         }
     }
-}
 
 h1 {
+    margin: 0;
     z-index: 10;
-    color: white;
     font-size: 5rem;
-    margin: 10px auto;
+    // color: $lightColour;
+    color: $accentColour2;
     font-family: $titleFont;
 }
-
-// nav styling
-
-.menu {
-    z-index: 20;
-    color: black;
-    font-size: 5rem;
-    position: fixed;
-    padding: 5px 10px;
-    top: 7vh;
-    right: 0vw;
-    cursor: pointer;
-    transition: transform 0.5s, text-shadow 0.5s;
-
-    &:hover {
-        transform: translateY(5px);
-    }
-}
-
-.turn {
-    transform: rotate(270deg) translateY(-1vw);
-
-    &:hover {
-        transform: translateY(5px);
-    }
-}
-
-// will display:none mean SRs can still read it regardless of the element being on the screen?
-.closed {
-    display:none;
-    width:140px;
-}
-
-.open {
-    background: $accentColour1;
-    display: block;
-    z-index: 100;
-    position: fixed;
-    top: 11.7vh;
-    right: 18vw;
-}
-
 .social {
     z-index: 10;
-    margin-bottom: 10px;
     width: 210px;
     @include flexBox(row, space-between, center);
 
     a {
-        color: white;
+        color: $lightColour;
         font-size: 3rem;
-        transition: text-shadow 0.5s;
+        transition: color 0.5s;
 
         &:hover {
-            text-shadow: 5px 5px rgba(255, 255, 255, 0.582);
-        }
-
-        &:visited {
             color: $accentColour2;
         }
     }
 }
-
-nav {
-    background-color: white;
-    border: 2px solid black;
-    @include bRadius();
-    overflow-y: hidden;
-    max-height: 232px;
-
-    li {
-        text-align: left;
-    }
-
-    a {
-        color: white;
-        text-decoration: none;
-        font-weight: 700;
-        display: block;
-        padding: 7px;
-        position: relative;
-
-        &:visited {
-            color: $accentColour2;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            height:100%;
-            width: 0px;
-            bottom:0;
-            top:0;
-            left: 0;
-            transition: width ease-in-out 0.3s; 
-        }
-
-        &:hover::before {
-            width: 36px;
-            background-color: $accentColour2;
-        }
-    }
-
-    li:first-child a:before { 
-        border-top-left-radius: 13px;
-    }
-
-    // icons in nav
-    i {
-        color: white;
-        margin-right: 15px;
-        z-index: 5;
-    }
 }

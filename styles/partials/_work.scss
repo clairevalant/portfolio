@@ -1,7 +1,7 @@
 // Work styles
 
 #work {
-    border-bottom: 11px dotted $mainColour;
+    border-bottom: 11px dotted $lightColour;
     position: relative;
 
     .fa-cubes {
@@ -17,14 +17,6 @@
 
 h3 {
     margin-top:0;
-}
-
-.wave2 {
-    width: 130px;
-    position: absolute;
-    top: -65px;
-    right: 27px;
-    z-index: 5;
 }
 
 .project {
@@ -49,7 +41,6 @@ h3 {
         padding: 10px;
         border: 2px solid $accentColour2;
         transition: background 0.3s, color 0.3s, border 0.3s;
-        @include bRadius();
 
         &:first-of-type {
             margin-right: 10px;

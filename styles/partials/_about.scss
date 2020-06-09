@@ -1,24 +1,10 @@
 // About styles
 
 #about {
-    background-color: $mainColour;
-    position: relative;
+    background-color: $lightColour;
 
-     a {
-        text-decoration: none;
-        position: relative;
-        color: $accentColour1;
-
-        &:hover {
-            text-decoration: underline;
-        }
-
-        &:visited {
-            color: $accentColour;
-        }
-    }
-
-    .fa-smile {
-        color: $accentColour2;
+    h2:before {
+        content: '\f118';
+        color: $accentColour3;
     }
 }
