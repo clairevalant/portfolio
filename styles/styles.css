@@ -317,7 +317,6 @@ header .wave {
 
 header .wrapper {
   z-index: 0;
-  position: fixed;
   margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,6 +476,7 @@ section a:hover, section a:focus {
 
 .wrapper {
   width: 80vw;
+  max-width: 1200px;
 }
 
 ul {
@@ -666,11 +666,6 @@ h3 {
   transition: transform 0.35s, -webkit-transform 0.35s;
 }
 
-.skill:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
 .skill i {
   font-size: 2rem;
 }
@@ -858,6 +853,13 @@ footer .fa-smile {
   header .dots {
     width: 20vw;
     bottom: -8.5vh;
+  }
+  header .wrapper {
+    position: fixed;
+  }
+  .skill:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   #skills .iconContainer {
     width: auto;

@@ -58,8 +58,17 @@
             width: 20vw;
             bottom: -8.5vh;
         }
+
+        .wrapper {
+            position: fixed;
+        }
     }
 
+    .skill {
+          &:hover {
+            transform: scale(1.2);
+        }
+    }
 
     #skills .iconContainer{
         width: auto;

@@ -53,10 +53,6 @@
     .skill {
         transition: transform 0.35s;
 
-        &:hover {
-            transform: scale(1.2);
-        }
-
         i {
             font-size: 2rem;
         }
