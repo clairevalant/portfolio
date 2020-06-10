@@ -35,11 +35,6 @@
     }
 }
 
-.resume {
-    font-size: 2rem;
-    margin-top: 70px;
-}
-
  // add labels to icons when mobile user clicks !!
     .iconContainer {
         padding: 30px 0 30px 10%;
@@ -57,3 +52,20 @@
             font-size: 2rem;
         }
     }
+
+.resume {
+    left: 50%;
+    padding: 15px;
+    margin-top: 60px;
+    position: relative;
+    border: 1px solid $accentColour3;
+    display: inline-block;
+    transform: translateX(-50%);
+    background-color: $lightColour;
+
+    &:hover
+    &:focus {
+        color: $accentColour1;
+        background-color: $lightColour;
+    }
+}

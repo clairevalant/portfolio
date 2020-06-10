@@ -1,9 +1,11 @@
 // Footer styles
 
 footer {
+    z-index: 30;
     @include flexBox();
     color: $lightColour;
     font-size: 1.3rem;
+    position: relative;
     background: $accentColour3;
 
     p {

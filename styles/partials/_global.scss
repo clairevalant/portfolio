@@ -2,7 +2,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    background: $accentColour3;
+    background: $accentColour1;
 }
 
 body {
@@ -33,6 +33,13 @@ header,
 section,
 footer {
     @include flexBox();
+}
+
+.resume,
+.contactBtn {
+    padding: 8px 10px;
+    text-decoration: none;
+    transition: background 0.4s, color 0.4s;
 }
 
 #work {

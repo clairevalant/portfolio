@@ -23,24 +23,25 @@ header {
 
     .dots {
         width: 33vw;
+        max-width: 230px;
         position: absolute;
-        bottom: -12vh;
+        bottom: 0;
         right: 6px;
         z-index: 30;
     }
 
     .wave {
-        transform: rotate(90deg);
+        transform: rotate(90deg) translateX(19%);
         width: 40vw;
+        max-width: 250px;
         position: absolute;
-        bottom: -13vh;
+        bottom: 0;
         left: 0px;
         z-index: 8;
     }
 
     .wrapper {
         z-index: 0;
-        margin-top: 30px;
         @include flexBox(column, center, center);
     }
 
@@ -50,7 +51,7 @@ header {
     }
 
     p {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     p,
@@ -62,9 +63,6 @@ header {
         color:$accentColour1;
         background: $lightColour;
         border: 2px solid $accentColour;
-        padding: 10px;
-        text-decoration: none;
-        transition: background 0.4s;
         
         &:hover,
         &:focus {
@@ -72,27 +70,28 @@ header {
         }
     }
 
-h1 {
-    margin: 0;
-    z-index: 10;
-    font-size: 5rem;
-    color: $accentColour2;
-    font-family: $titleFont;
-}
-.social {
-    z-index: 10;
-    width: 210px;
-    @include flexBox(row, space-between, center);
+    .social {
+        z-index: 10;
+        width: 210px;
+        @include flexBox(row, space-between, center);
 
-    a {
-        color: $lightColour;
-        font-size: 3rem;
-        transition: color 0.5s;
+        a {
+            color: $lightColour;
+            font-size: 3rem;
+            transition: color 0.5s;
 
-        &:hover,
-        &:focus {
+            &:hover,
+            &:focus {
             color: $accentColour2;
+            }
         }
+    }   
+}   
+
+ h1 {
+        margin: 0;
+        z-index: 10;
+        font-size: 4.5rem;
+        color: $accentColour2;
+        font-family: $titleFont;
     }
-}
-}

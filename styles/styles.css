@@ -299,25 +299,26 @@ header .wave1 {
 
 header .dots {
   width: 33vw;
+  max-width: 230px;
   position: absolute;
-  bottom: -12vh;
+  bottom: 0;
   right: 6px;
   z-index: 30;
 }
 
 header .wave {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(90deg) translateX(19%);
+          transform: rotate(90deg) translateX(19%);
   width: 40vw;
+  max-width: 250px;
   position: absolute;
-  bottom: -13vh;
+  bottom: 0;
   left: 0px;
   z-index: 8;
 }
 
 header .wrapper {
   z-index: 0;
-  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,7 +340,7 @@ header ul {
 }
 
 header p {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 header p,
@@ -351,22 +352,10 @@ header .contactBtn {
   color: #5154e8;
   background: #faf9f4;
   border: 2px solid #FF4242;
-  padding: 10px;
-  text-decoration: none;
-  -webkit-transition: background 0.4s;
-  transition: background 0.4s;
 }
 
 header .contactBtn:hover, header .contactBtn:focus {
   background: #F0CD04;
-}
-
-header h1 {
-  margin: 0;
-  z-index: 10;
-  font-size: 5rem;
-  color: #F0CD04;
-  font-family: "Major Mono Display", monospace;
 }
 
 header .social {
@@ -398,10 +387,18 @@ header .social a:hover, header .social a:focus {
   color: #F0CD04;
 }
 
+h1 {
+  margin: 0;
+  z-index: 10;
+  font-size: 4.5rem;
+  color: #F0CD04;
+  font-family: "Major Mono Display", monospace;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  background: #00916e;
+  background: #5154e8;
 }
 
 body {
@@ -445,6 +442,14 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.resume,
+.contactBtn {
+  padding: 8px 10px;
+  text-decoration: none;
+  -webkit-transition: background 0.4s, color 0.4s;
+  transition: background 0.4s, color 0.4s;
 }
 
 #work {
@@ -645,11 +650,6 @@ h3 {
   margin-right: 10px;
 }
 
-.resume {
-  font-size: 2rem;
-  margin-top: 70px;
-}
-
 .iconContainer {
   padding: 30px 0 30px 10%;
   width: 80%;
@@ -668,6 +668,23 @@ h3 {
 
 .skill i {
   font-size: 2rem;
+}
+
+.resume {
+  left: 50%;
+  padding: 15px;
+  margin-top: 60px;
+  position: relative;
+  border: 1px solid #00916e;
+  display: inline-block;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #faf9f4;
+}
+
+.resume:hover .resume:focus {
+  color: #5154e8;
+  background-color: #faf9f4;
 }
 
 .wave2 {
@@ -779,6 +796,7 @@ textarea[type="submit"]:focus {
 }
 
 footer {
+  z-index: 30;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -794,6 +812,7 @@ footer {
           align-items: center;
   color: #faf9f4;
   font-size: 1.3rem;
+  position: relative;
   background: #00916e;
 }
 
@@ -825,15 +844,18 @@ footer .fa-smile {
   }
 }
 
-@media only screen and (min-height: 570px) {
-  header .grid {
-    height: 35vh;
+@media only screen and (min-height: 660px) {
+  header .wrapper {
+    margin-top: 30px;
   }
 }
 
 @media only screen and (min-width: 600px) {
   body {
     font-size: 1.7rem;
+  }
+  h1 {
+    font-size: 5rem;
   }
   h2 {
     font-size: 3rem;
@@ -843,16 +865,14 @@ footer .fa-smile {
   }
   header .wave {
     width: 30vw;
-    bottom: -16vh;
   }
   header .wave1 {
     width: 260px;
-    right: 200px;
+    right: 100px;
     display: block;
   }
   header .dots {
     width: 20vw;
-    bottom: -8.5vh;
   }
   header .wrapper {
     position: fixed;
@@ -1036,22 +1056,54 @@ footer .fa-smile {
   #work .captions.right {
     margin-left: 30px;
   }
-}
-
-@media only screen and (min-width: 1000px) {
   form {
     width: 70%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 7rem;
+  }
   nav {
     right: 120px;
   }
+  header .wave1 {
+    right: 200px;
+  }
   header .wave {
-    width: 20vw;
-    bottom: -16.5vh;
+    width: 250px;
     left: 10vw;
+  }
+}
+
+@media only screen and (max-height: 560px) and (max-width: 620px) {
+  header .wave1 {
+    display: none;
+  }
+}
+
+@media only screen and (min-height: 570px) {
+  header .grid {
+    height: 35vh;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  header .wave {
+    width: 35vw;
+  }
+  header .dots {
+    width: 26vw;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  header .wave {
+    width: 30vw;
+  }
+  header .dots {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */
